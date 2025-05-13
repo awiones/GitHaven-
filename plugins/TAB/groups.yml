@@ -1,0 +1,32 @@
+#Owner:
+#  tabprefix: "&0&l[&a&lOwner&0&l] &a"
+#  tagprefix: "&2&lOwner &a"
+Player:
+  tabprefix: "&0&l[&7&lPlayer&0&l] &3"
+  tagprefix: "&2&lPlayer &3"
+example_group:
+  header:
+    - "This is an example of per-group header/footer"
+  footer:
+    - "applied to a group"
+
+ # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+_DEFAULT_:
+  tabprefix: "&8[&b%luckperms-primary-group%&8] &r%luckperms-prefix% "
+  tagprefix: "&8[&b%luckperms-primary-group%&8] &r%luckperms-prefix% "
+  customtabname: "&f%player%"
+  tabsuffix: "%luckperms-suffix%"
+  tagsuffix: "%luckperms-suffix%"
+  header:
+    - "&a&lWelcome to &b&lGitHaven!"
+    - "&7Online: &b%online% &7| &7TPS: &a%tps%"
+    - "&7Your Group: &b%luckperms-primary-group%"
+    - "&7Balance: &6$%vault_eco_balance%"
+  footer:
+    - "&eWebsite: &bwww.githaven.net &7| &eDiscord: &bdiscord.githaven.net"
+
+per-world:
+  world1:
+    Owner:
+      tabprefix: "&0&l[&a&lOwner&0&l] &a"
+      tagprefix: "&2&lOwner &a"

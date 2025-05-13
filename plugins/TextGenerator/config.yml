@@ -1,0 +1,9 @@
+textSettings:
+  block: quartz_block
+  fontName: Arial
+  fontSize: 15
+  fontStyle: BOLD
+  underline: false
+  lineSpacing: 2
+placementRange: 30
+dragToMove: false
