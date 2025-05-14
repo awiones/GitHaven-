@@ -1,0 +1,19 @@
+worlds:
+  lobby-githaven:
+    spawnpoint: lobby-githaven:0.333465012659431:-18.0:-15.284628157627473:3.4502575:11.399974
+    y-void: -64.0
+    enabled: true
+    keep-inventory: true
+    nether: false
+  skyblock-lobby:
+    spawnpoint: skyblock-lobby:252.5:139.0:1412.5:83.99965:-6.7500434
+    y-void: -64.0
+    enabled: true
+    keep-inventory: true
+    nether: false
+  smp-lobby:
+    spawnpoint: smp-lobby:0.5166191228789139:30.0:0.47625105207508306:2.8500073:26.09995
+    y-void: -64.0
+    enabled: true
+    keep-inventory: true
+    nether: false

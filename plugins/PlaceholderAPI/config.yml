@@ -39,3 +39,31 @@ expansions:
       high: '&a'
       medium: '&e'
       low: '&c'
+  formatter:
+    shorten:
+      pattern: '###.#'
+      trillions: '{{number}}T'
+      quadrillions: '{{number}}Q'
+      billions: '{{number}}B'
+      millions: '{{number}}M'
+      thousands: '{{number}}K'
+      rounding_mode: half-up
+    formatting:
+      pattern: '#,###,###.##'
+      locale: en-US
+    time:
+      seconds: '{{number}}s'
+      milliseconds: '{{number}}ms'
+      includeZeroSeconds: false
+      days: '{{number}}d'
+      belowZeroOutput: '{{number}}'
+      hours: '{{number}}h'
+      includeZeroDays: false
+      includeZeroMinutes: false
+      includeZeroHours: false
+      condensed: false
+      includeZeroMilliseconds: false
+      minutes: '{{number}}m'
+    rounding:
+      mode: half-up
+      precision: 0

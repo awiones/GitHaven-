@@ -1,8 +1,8 @@
 # Support: https://discord.gg/badbones-s-live-chat-182615261403283459
 # Github: https://github.com/Crazy-Crew
 # 
-# Issues: https://github.com/Crazy-Crew/CrazyCrates/issues
-# Features: https://github.com/Crazy-Crew/CrazyCrates/issues
+# Issues: https://github.com/Crazy-Crew/GitCrates/issues
+# Features: https://github.com/Crazy-Crew/GitCrates/issues
 # 
 # All messages allow the use of {prefix} unless stated otherwise.
 # 
@@ -105,7 +105,7 @@ crates:
     # A list of available placeholders: {id}
     removed: '{prefix}<gray>You have removed <gold>{id}.'
   list:
-    # The format for the /crazycrates list command
+    # The format for the /gitcrates list command
     format:
     - <bold><gold>━━━━━━━━━━━━━━━━━━━ Crate Statistics ━━━━━━━━━━━━━━━━━━━</gold></bold>
     - '<dark_gray>»</dark_gray> <green>Active Crates: '
@@ -142,7 +142,7 @@ crates:
     # 
     # A list of available placeholders: {amount}
     claimed: '{prefix}<red>You have claimed {amount} prizes from your respins!'
-    # This is sent, when a player runs /crazycrates claim <crate>
+    # This is sent, when a player runs /gitcrates claim <crate>
     # 
     # The command will act as a way to get their latest respin prize before they open a respin menu
     # 
@@ -150,7 +150,7 @@ crates:
     redeemed: '{prefix}<red>You have redeemed your prize with the name {prize} from
       the crate named {crate}!'
     # A list of available placeholders: {prize}, {crate}, {crate_pretty}
-    not-claimed: '{prefix}<red>If you didn''t get your prize, please run /crazycrates
+    not-claimed: '{prefix}<red>If you didn''t get your prize, please run /gitcrates
       claim {crate}'
     # A list of available placeholders: {crate}, {crate_pretty}
     empty: '{prefix}There is no prize to claim from the crate {crate}.'
@@ -251,16 +251,16 @@ command:
     # A list of available placeholders: {crate}, {keys}, {crate_opened}
     crate-format: '{crate} <bold><gray>><dark_gray>></bold> <gold>{keys} keys <gray>:
       Opened <gold>{crate_opened} times'
-  # This requires crazycrates.command.help
+  # This requires gitcrates.command.help
   player-help:
-  - <bold><yellow>Crazy Crates Player Help</bold>
+  - <bold><yellow>Git Crates Player Help</bold>
   - ''
   - <gold>/keys view [player] <gray>- <yellow>Check the number of keys a player has.
   - <gold>/keys <gray>- <yellow>Shows how many keys you have.
   - <gold>/crates <gray>- <yellow>Opens the menu.
-  # This requires crazycrates.command.admin.help
+  # This requires gitcrates.command.admin.help
   admin-help:
-  - <bold><red>Crazy Crates Admin Help</bold>
+  - <bold><red>Git Crates Admin Help</bold>
   - ''
   - <gold>/crates additem <crate_name> <prize_number> <chance> [tier] <gray>- <yellow>Add
     items in-game to a prize in a crate including Cosmic/Casino.
@@ -296,4 +296,4 @@ command:
   - <gold>/keys <gray>- <yellow>Shows how many keys you have.
   - <gold>/crates <gray>- <yellow>Opens the menu.
   - ''
-  - <gray>You can find a list of permissions @ <yellow>https://docs.crazycrew.us/crazycrates/info/commands/permissions
+  - <gray>You can find a list of permissions @ <yellow>https://docs.crazycrew.us/gitcrates/info/commands/permissions

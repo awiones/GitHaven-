@@ -1,8 +1,8 @@
 # Support: https://discord.gg/badbones-s-live-chat-182615261403283459
 # Github: https://github.com/Crazy-Crew
 # 
-# Issues: https://github.com/Crazy-Crew/CrazyCrates/issues
-# Features: https://github.com/Crazy-Crew/CrazyCrates/issues
+# Issues: https://github.com/Crazy-Crew/GitCrates/issues
+# Features: https://github.com/Crazy-Crew/GitCrates/issues
 # 
 # List of all sounds: https://minecraft.wiki/w/Sounds.json#Java_Edition_values
 root:
@@ -10,7 +10,7 @@ root:
   # 
   # If the option is set to false, items should be more random in theory.
   use-different-random: false
-  # This option defines what in-game editor format is used in CrazyCrates.
+  # This option defines what in-game editor format is used in Git Crates.
   # 
   # true -> uses the new editor
   # false -> uses the old editor
@@ -22,8 +22,8 @@ root:
   # 
   # It feels right to make a toggle for it regardless.
   # 
-  # false -> crazycrates.open.<crate-name>
-  # true -> crazycrates.deny.open.<crate_name>
+  # false -> gitcrates.open.<crate-name>
+  # true -> gitcrates.deny.open.<crate_name>
   # 
   # Eventually, one of these options will be either removed or kept.
   # Changing this option requires you to restart your server!
@@ -41,10 +41,10 @@ root:
   # 
   # If the option is set to blank, it'll pick whatever plugin it feels like picking.
   hologram-plugin: ''
-  # This will wipe the example folder on /crazycrates reload or plugin startup. so you always have fresh examples to look at.
+  # This will wipe the example folder on /gitcrates reload or plugin startup. so you always have fresh examples to look at.
   update-examples-folder: true
   # The prefix used in commands
-  command_prefix: '<dark_gray>[<blue>CrazyCrates<dark_gray>]: '
+  command_prefix: '<dark_gray>[<blue>Git Crates<dark_gray>]: '
 # Settings related to guis.
 gui:
   # If /crates should open the main menu. Warning: This will remove the menu button from crate previews.
@@ -52,7 +52,7 @@ gui:
   # Inventory settings like size.
   inventory:
     # The name of the gui.
-    name: <bold><blue>Crazy <dark_red>Crates</bold>
+    name: <bold><blue>Git <dark_red>Crates</bold>
     # The amount of rows for a gui.
     rows: 5
     # The buttons in the gui.

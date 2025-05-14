@@ -1,0 +1,237 @@
+Crate:
+  # https://docs.crazycrew.us/docs/plugins/crazycrates/misc/crate-types
+
+  # Make sure to check out the wiki for anything not explained here.
+  # https://docs.crazycrew.us/docs/category/crazycrates
+
+  # See CosmicCrate.yml or CasinoCrate.yml to see how the Cosmic/Casino CrateType works.
+  CrateType: CSGO
+  # Starting amount of keys when the player 1st joins.
+  StartingKeys: 0
+  # The amount of keys required to use the crate.
+  RequiredKeys: 0
+  # Max amount of crates that can be opened at once using /crates mass-open
+  Max-Mass-Open: 10
+  # If the crate shows in /crates.
+  # If the type is QuickCrate/CrateOnTheGo/FireCracker, They will not work as they require a Physical Crate.
+  InGUI: true
+  # Slot the item is in the GUI.
+  Slot: 13
+  # Enables/Disables the Broadcasts message when they open a crate.
+  OpeningBroadCast: true
+  # Message that is broadcast when opening the crate.
+  BroadCast: "%prefix%<bold><gold>%player%</bold><reset> <gray>is opening a <bold><light_purple>Advanced Crate.</bold>"
+  # This section is related to commands opening when a crate is opened.
+  opening-command:
+    # If the commands should be sent or not.
+    toggle: false
+    # The commands to run when the crate opens.
+    # Supports all placeholderapi placeholders
+    # Supports %prefix which returns our prefix, %player% which uses the player name
+    commands:
+      - "put your command here."
+  sound:
+    # The sound options when the animation is cycling.
+    cycle-sound:
+      # If sound should be enabled or not.
+      toggle: true
+      # The type of sound to use. Custom sounds from texture packs are supported!
+      # https://minecraft.wiki/w/Sounds.json#Java_Edition_values
+      value: "block.note_block.xylophone"
+      # The volume of the pitch.
+      volume: 1.0
+      # The speed of the sound.
+      pitch: 1.0
+    # The sound options when an item is clicked.
+    click-sound:
+      # If sound should be enabled or not.
+      toggle: true
+      # The type of sound to use. Custom sounds from texture packs are supported!
+      # https://minecraft.wiki/w/Sounds.json#Java_Edition_values
+      value: "ui.button.click"
+      # The volume of the pitch.
+      volume: 1.0
+      # The speed of the sound.
+      pitch: 1.0
+    # The sound options when a crate ends.
+    stop-sound:
+      # If sound should be enabled or not.
+      toggle: true
+      # The type of sound to use. Custom sounds from texture packs are supported!
+      # https://minecraft.wiki/w/Sounds.json#Java_Edition_values
+      value: "entity.player.levelup"
+      # The volume of the pitch.
+      volume: 1.0
+      # The speed of the sound.
+      pitch: 1.0
+  # A default message if the prize doesn't have any Messages
+  # i.e. Messages: [] or the value isn't there.
+  Prize-Message:
+    - "<gray>You have won <red>%reward% <gray>from <red>%crate%."
+  # A default command if the prize doesn't have any commands
+  # i.e. Commands: [] or the value isn't there.
+  Prize-Commands: []
+  # Global Settings
+  Settings:
+    # Broadcast a message to the server
+    Broadcast:
+      # If the messages should be sent.
+      Toggle: false
+      # The messages to broadcast.
+      Messages:
+        - "<red>%player% won the prize <yellow>%reward%."
+      # If the player has this permission, they don't get the broadcast.
+      Permission: ""
+    # Settings related to rewards.
+    Rewards:
+      # Should a yes/no popup be made, to ask if they want to keep the prize?
+      Re-Roll-Spin: false
+      # Should there be a limit to how many times they can re-roll?
+      Permission:
+        Toggle: false
+        # This will define how many permissions will be registered to the server per crate.
+        # i.e. crazycrates.respin.crate_name.1-20
+        # It will simply register multiple permissions, so it shows up in things like LuckPerms.
+        Max-Cap: 20
+  # Item the crate is in the GUI
+  Item: "spawner"
+  Custom-Model-Data: -1
+  Glowing: false
+  Name: "<bold><green>Animal Crate</bold>"
+  # The custom model data of the item, -1 is disabled.
+  Custom-Model-Data: -1
+  # If the crate in the main /cc GUI is glowing or not.
+  Glowing: false
+  # Name of the item in the GUI.
+  Name: "<bold><green>Animal Crate</bold>"
+  # The lore of the item in the GUI.
+  Lore:
+    - "<gray>This crate contains animal spawners and eggs."
+    - "<gray>You have <gold>%keys% keys <gray>to open this crate with."
+    - "<gray>You have opened this crate: <gold>%crate_opened% times"
+    - "<gray>(<yellow>!<gray>) Right click to view rewards."
+  Preview:
+    # The name of the inventory for the preview menu.
+    Name: "<green>Animal Crate Preview"
+    # Turn on and off the preview for this crate.
+    Toggle: true
+    # How many lines should the preview be? You can use 1-6.
+    ChestLines: 3
+    Glass:
+      # Turn the glass border in the preview on and off.
+      Toggle: true
+      # The name of the border item.
+      Name: " "
+      # The item that shows in the border. Can be glass or any other item.
+      Item: "gray_stained_glass_pane"
+      # The custom model data of the item, -1 is disabled.
+      Custom-Model-Data: -1
+  PhysicalKey:
+    # Name of the Key.
+    Name: "<bold><green>Animal Crate Key</bold>"
+    # Lore of the Key.
+    Lore:
+      - "<gray>A special Key for animal crate."
+    # The item the key is.
+    Item: "tripwire_hook"
+    # The custom model data of the item, -1 is disabled.
+    Custom-Model-Data: -1
+    # Makes the key look enchanted.
+    Glowing: true
+  # Settings for the holograms.
+  Hologram:
+    # Toggle on and off the holograms for the crates.
+    Toggle: true
+    # The height of the hologram above the crate.
+    Height: 1.5
+    # The distance the hologram can be seen.
+    Range: 8
+    # How often should the hologram update? -1 is disabled.
+    Update-Interval: -1
+    # The background color of the hologram. It uses hex colors. This only works with CMI/FancyHolograms
+    # Set the color to transparent if you don't want any color.
+    Color: "transparent"
+    # The message that will be displayed above the crate.
+    # Note: MiniMessage or Color Codes being supported is depending on the 'holograms' plugin.
+    Message:
+      - "&a&lAnimal Crate"
+  # All the prizes that can be obtained in the Crate.
+  # This is a slightly more advanced version. If you want simple!
+  # See the CrateExample.yml for a more simple crate.
+  Prizes:
+    "1":
+      DisplayName: "<green>Cow Spawner"
+      DisplayItem: "spawner"
+      Settings:
+        Custom-Model-Data: -1
+        Mob-Type: cow
+      DisplayAmount: 1
+      Weight: 5.4
+      Items:
+        - "Item:spawner, Mob:cow"
+    "2":
+      DisplayName: "<yellow>Chicken Spawner"
+      DisplayItem: "spawner"
+      Settings:
+        Custom-Model-Data: -1
+        Mob-Type: chicken
+      DisplayAmount: 1
+      Weight: 5.5
+      Items:
+        - "Item:spawner, Mob:chicken"
+    "3":
+      DisplayName: "<red>Pig Spawner"
+      DisplayItem: "spawner"
+      Settings:
+        Custom-Model-Data: -1
+        Mob-Type: pig
+      DisplayAmount: 1
+      Weight: 5.6
+      Items:
+        - "Item:spawner, Mob:pig"
+    "4":
+      DisplayName: "<aqua>Sheep Spawner"
+      DisplayItem: "spawner"
+      Settings:
+        Custom-Model-Data: -1
+        Mob-Type: sheep
+      DisplayAmount: 1
+      Weight: 5.3
+      Items:
+        - "Item:spawner, Mob:sheep"
+    "5":
+      DisplayName: "<green>3x Cow Spawn Egg"
+      DisplayItem: "cow_spawn_egg"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 3
+      Weight: 20.4
+      Items:
+        - "Item:cow_spawn_egg, Amount:3"
+    "6":
+      DisplayName: "<yellow>3x Chicken Spawn Egg"
+      DisplayItem: "chicken_spawn_egg"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 3
+      Weight: 20.4
+      Items:
+        - "Item:chicken_spawn_egg, Amount:3"
+    "7":
+      DisplayName: "<red>3x Pig Spawn Egg"
+      DisplayItem: "pig_spawn_egg"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 3
+      Weight: 20.5
+      Items:
+        - "Item:pig_spawn_egg, Amount:3"
+    "8":
+      DisplayName: "<aqua>3x Sheep Spawn Egg"
+      DisplayItem: "sheep_spawn_egg"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 3
+      Weight: 20.2
+      Items:
+        - "Item:sheep_spawn_egg, Amount:3"

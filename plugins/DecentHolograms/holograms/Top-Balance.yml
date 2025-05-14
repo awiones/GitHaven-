@@ -1,0 +1,21 @@
+location: lobby-githaven:-5:-15:8
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 2
+facing: 0.0
+down-origin: false
+pages:
+  - lines:
+      - content: '&8&m=====&a&lBaltop&8&m====='
+        height: 0.3
+      - content: '&2#1 &f&l%ajlb_lb_vault_eco_balance_1_alltime_name% &2> &a%ajlb_lb_vault_eco_balance_1_alltime_value_formatted% &a$'
+        height: 0.3
+      - content: '&2#2 &f&l%ajlb_lb_vault_eco_balance_2_alltime_name% &2> &a%ajlb_lb_vault_eco_balance_2_alltime_value_formatted% &a$'
+        height: 0.3
+      - content: '&2#3 &f&l%ajlb_lb_vault_eco_balance_3_alltime_name% &2> &a%ajlb_lb_vault_eco_balance_3_alltime_value_formatted% &a$'
+        height: 0.3
+      - content: '&2#4 &f&l%ajlb_lb_vault_eco_balance_4_alltime_name% &2> &a%ajlb_lb_vault_eco_balance_4_alltime_value_formatted% &a$'
+        height: 0.3
+      - content: '&2#5 &f&l%ajlb_lb_vault_eco_balance_5_alltime_name% &2> &a%ajlb_lb_vault_eco_balance_5_alltime_value_formatted% &a$'
+        height: 0.3

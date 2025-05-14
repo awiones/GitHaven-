@@ -1,1 +1,13 @@
-Locations: {}
+Locations:
+  '1':
+    Crate: BasicCrate
+    World: skyblock-lobby
+    X: 215
+    Y: 141
+    Z: 1432
+  '2':
+    Crate: AnimalCrate
+    World: skyblock-lobby
+    X: 215
+    Y: 141
+    Z: 1430

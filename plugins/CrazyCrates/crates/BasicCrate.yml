@@ -1,0 +1,175 @@
+Crate:
+  CrateType: CSGO
+  StartingKeys: 0
+  RequiredKeys: 0
+  Max-Mass-Open: 10
+  InGUI: true
+  Slot: 11
+  OpeningBroadCast: true
+  BroadCast: "%prefix%<bold><gold>%player%</bold><reset> <gray>is opening a <bold><yellow>Basic Crate.</bold>"
+  opening-command:
+    toggle: false
+    commands:
+      - "put your command here."
+  sound:
+    cycle-sound:
+      toggle: true
+      value: "block.note_block.xylophone"
+      volume: 1.0
+      pitch: 1.0
+    click-sound:
+      toggle: true
+      value: "ui.button.click"
+      volume: 1.0
+      pitch: 1.0
+    stop-sound:
+      toggle: true
+      value: "entity.player.levelup"
+      volume: 1.0
+      pitch: 1.0
+  Prize-Message:
+    - "<gray>You have won <red>%reward% <gray>from <red>%crate%."
+  Prize-Commands: []
+  Settings:
+    Broadcast:
+      Toggle: false
+      Messages:
+        - "<red>%player% won the prize <yellow>%reward%."
+      Permission: ""
+    Rewards:
+      Re-Roll-Spin: false
+      Permission:
+        Toggle: false
+        Persist: false
+        Max-Cap: 20
+  Item: "chest"
+  Custom-Model-Data: -1
+  Glowing: false
+  Name: "<bold><yellow>Basic Crate</bold>"
+  Lore:
+    - "<gray>This crate contains strange objects."
+    - "<gray>You have <gold>%keys% keys <gray>to open this crate with."
+    - "<gray>You have opened this crate: <gold>%crate_opened% times"
+    - "<gray>(<yellow>!<gray>) Right click to view rewards."
+  Preview:
+    Name: "<yellow>Basic Crate Preview"
+    Toggle: true
+    ChestLines: 6
+    Glass:
+      Toggle: true
+      Name: " "
+      Item: "gray_stained_glass_pane"
+      Custom-Model-Data: -1
+  PhysicalKey:
+    Name: "<bold><yellow>Basic Crate Key</bold>"
+    Lore:
+      - "<gray>A special Key"
+      - "<gray>For a special Crate."
+    Item: "tripwire_hook"
+    Custom-Model-Data: -1
+    Glowing: true
+  Hologram:
+    Toggle: true
+    Height: 1.5
+    Range: 8
+    Update-Interval: -1
+    Color: "transparent"
+    Message:
+      - "&e&lBasic Crate"
+  Prizes:
+    "1":
+      DisplayName: "<gold>20 Cooked Beef"
+      DisplayItem: "cooked_beef"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 20
+      Weight: 1.0
+      Items:
+        - "Item:cooked_beef, Amount:20, Name:<gold>20 Cooked Beef"
+    "2":
+      DisplayName: "<red>Diamond Sword"
+      DisplayEnchantments:
+        - "sharpness:5"
+        - "looting:3"
+      DisplayItem: "diamond_sword"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 1
+      Weight: 15.0
+      Items:
+        - "Item:diamond_sword, Name:<red>Diamond Sword, sharpness:5, looting:3"
+    "3":
+      DisplayName: "<red>Diamond Helmet"
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:3"
+      DisplayTrim:
+        Material: "quartz"
+        Pattern: "sentry"
+      DisplayItem: "diamond_helmet"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 1
+      DisplayLore:
+        - "<gradient:#8fcfa0:#32a852>A gradient lore!"
+      Weight: 15.0
+      Items:
+        - "Item:diamond_helmet, Name:<red>Diamond Helmet, protection:5, unbreaking:3"
+    "4":
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:3"
+      DisplayItem: "enchanted_book"
+      Settings:
+        Custom-Model-Data: -1
+      DisplayAmount: 3
+      DisplayLore:
+        - "<gradient:#8fcfa0:#32a852>A gradient lore!"
+      Weight: 25.0
+      Items:
+        - "Item:enchanted_book, protection:5, unbreaking:3"
+    "5":
+      DisplayName: "<yellow>$1,000"
+      DisplayItem: "sunflower"
+      Settings:
+        Custom-Model-Data: -1
+        Broadcast:
+          Toggle: false
+          Messages:
+            - "<red>%player% won the prize <yellow>%reward%."
+          Permission: ""
+      DisplayAmount: 5
+      DisplayLore:
+        - "<gray>Make it rain Money."
+        - "<bold><gold>Chance: <red>20%</bold>"
+      Weight: 20.0
+      Firework: true
+      Commands:
+        - "eco give %player% 1000"
+      Messages:
+        - "<gray>You won <reset>%reward%."
+    "6":
+      DisplayName: "<green>Fancy Shield <gray>| <red>%pulls%<gray>/<red>%maxpulls%"
+      DisplayItem: "shield"
+      DisplayPatterns:
+        - "base:white"
+        - "gradient_up:light_gray"
+        - "straight_cross:light_blue"
+        - "flower:light_blue"
+      Settings:
+        Custom-Model-Data: -1
+        Max-Pulls: 10
+      DisplayAmount: 1
+      Weight: 15.0
+      Items:
+        - "Item:shield, base:white, gradient_up:light_gray, straight_cross:light_blue, flower:light_blue"
+    "7":
+      DisplayName: "<green>Creeper Spawner"
+      DisplayItem: "spawner"
+      Settings:
+        Custom-Model-Data: -1
+        Mob-Type: creeper
+      DisplayAmount: 1
+      Weight: 23.5
+      Items:
+        - "Item:spawner, Mob:creeper"

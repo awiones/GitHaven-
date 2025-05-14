@@ -14,7 +14,13 @@ regions:
         min: {x: -56, y: -60, z: -47}
         max: {x: 43, y: 6, z: 60}
         members: {}
-        flags: {build: deny, block-break: deny, mob-spawning: deny}
+        flags:
+            entry: allow
+            spawn: {world: lobby-githaven, x: 0.5036903473989416, y: -18.0, z: -15.507463318080024,
+                pitch: 2.0999937, yaw: -2.6497245E-4}
+            build: deny
+            block-break: deny
+            mob-spawning: deny
         owners: {}
         type: cuboid
         priority: 0

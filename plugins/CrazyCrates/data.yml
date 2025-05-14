@@ -1,9 +1,12 @@
 Players:
   2e3183ef-c877-49ba-aef1-c3e6ea4a4ec3:
     tracking:
-      total-crates: 2
-      CrateExample: 1
+      total-crates: 24
+      CrateExample: 6
       WonderCrate: 1
+      BasicCrate: 8
+      AdvancedExample: 1
+      AnimalCrate: 8
   99a7ea62-ec71-4ced-aaa8-f59dad4bfd95:
     tracking:
       total-crates: 1
