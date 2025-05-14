@@ -1,0 +1,2 @@
+bossbar-off: &id001 []
+scoreboard-off: *id001

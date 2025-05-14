@@ -1,32 +1,164 @@
-#Owner:
-#  tabprefix: "&0&l[&a&lOwner&0&l] &a"
-#  tagprefix: "&2&lOwner &a"
+# ✦═════════════════════✦
+# ║     Group Config    ║
+# ✦═════════════════════✦
+# Configuration by Claude | May 13, 2025
+# groups.yml file for TAB plugin
+
+# ✦------------ Staff Groups ------------✦
+
+Owner:
+  tabprefix: "&8[&4&lOWNER&8] &4"
+  tagprefix: "&4&lOWNER &4"
+  tabsuffix: " &c✦"
+  tagsuffix: " &c✦"
+  customtabname: "&4%player%"
+  belowname: "&c❤ %health%"
+  header:
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &4&lOWNER PANEL &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+    - ""
+    - "&4Welcome back, &c%player%"
+    - "&cServer Status: &fTPS: &a%tps% &f| Memory: &a%memory-used%&f/&a%memory-max% MB"
+    - "&cOnline Staff: &f%staffonline%"
+    - "&cTotal Players: &f%online%&7/&f%server_max_players%"
+  footer:
+    - ""
+    - "&8» &7Staff commands: &f/staff"
+    - "&8» &7Server controls: &f/server"
+    - ""
+    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+
+Admin:
+  tabprefix: "&8[&c&lADMIN&8] &c"
+  tagprefix: "&c&lADMIN &c"
+  tabsuffix: " &6✦"
+  tagsuffix: " &6✦"
+  customtabname: "&c%player%"
+  belowname: "&c❤ %health%"
+  header:
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &c&lADMIN PANEL &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+    - ""
+    - "&cWelcome back, &f%player%"
+    - "&cServer Status: &fTPS: &a%tps% &f| Memory: &a%memory-used%&f/&a%memory-max% MB"
+    - "&cOnline Staff: &f%staffonline%"
+    - "&cTotal Players: &f%online%&7/&f%server_max_players%"
+  footer:
+    - ""
+    - "&8» &7Staff commands: &f/staff"
+    - "&8» &7Server controls: &f/server"
+    - ""
+    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+
+Mod:
+  tabprefix: "&8[&9&lMOD&8] &9"
+  tagprefix: "&9&lMOD &9"
+  tabsuffix: " &b⚒"
+  tagsuffix: " &b⚒"
+  customtabname: "&9%player%"
+  belowname: "&c❤ %health%"
+  header:
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &9&lMODERATOR PANEL &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+    - ""
+    - "&9Welcome back, &f%player%"
+    - "&9Server Status: &fTPS: &a%tps% &f| Players: &a%online%&f/&a%server_max_players%"
+    - "&9Recent Reports: &f%reports%"
+  footer:
+    - ""
+    - "&8» &7Mod commands: &f/mod"
+    - ""
+    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+
+Helper:
+  tabprefix: "&8[&3&lHELPER&8] &3"
+  tagprefix: "&3&lHELPER &3"
+  tabsuffix: " &b?"
+  tagsuffix: " &b?"
+  customtabname: "&3%player%"
+  belowname: "&c❤ %health%"
+  header:
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &3&lHELPER PANEL &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+    - ""
+    - "&3Welcome back, &f%player%"
+    - "&3Server Status: &fPlayers: &a%online%&f/&a%server_max_players%"
+    - "&3Help Requests: &f%helprequests%"
+  footer:
+    - ""
+    - "&8» &7Helper commands: &f/helper"
+    - ""
+    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+
+# ✦------------ Donor Groups ------------✦
+
+MVP:
+  tabprefix: "&8[&b&lMVP&8] &b"
+  tagprefix: "&b&lMVP &b"
+  tabsuffix: " &e★"
+  tagsuffix: " &e★"
+  customtabname: "&b%player%"
+  belowname: "&c❤ %health%"
+
+VIP:
+  tabprefix: "&8[&a&lVIP&8] &a"
+  tagprefix: "&a&lVIP &a"
+  tabsuffix: " &6✓"
+  tagsuffix: " &6✓"
+  customtabname: "&a%player%"
+  belowname: "&c❤ %health%"
+
+# ✦------------ Regular Groups ------------✦
+
 Player:
-  tabprefix: "&0&l[&7&lPlayer&0&l] &3"
-  tagprefix: "&2&lPlayer &3"
+  tabprefix: "&8[&7&lPLAYER&8] &f"
+  tagprefix: "&7&lPLAYER &f"
+  tabsuffix: ""
+  tagsuffix: ""
+  customtabname: "&f%player%"
+  belowname: "&c❤ %health%"
+
+# Example of a group with custom header/footer
 example_group:
   header:
     - "This is an example of per-group header/footer"
   footer:
     - "applied to a group"
 
- # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+# ✦------------ Default Settings ------------✦
+
+# Default settings for all groups
+# All groups will inherit these properties unless overridden
 _DEFAULT_:
-  tabprefix: "&8[&b%luckperms-primary-group%&8] &r%luckperms-prefix% "
-  tagprefix: "&8[&b%luckperms-primary-group%&8] &r%luckperms-prefix% "
+  tabprefix: "&8[&b%luckperms-primary-group%&8] &f"
+  tagprefix: "&8[&b%luckperms-primary-group%&8] &f"
   customtabname: "&f%player%"
   tabsuffix: "%luckperms-suffix%"
   tagsuffix: "%luckperms-suffix%"
+  belowname: "&c❤ %health%"
   header:
-    - "&a&lWelcome to &b&lGitHaven!"
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &e&lGITHAVEN NETWORK &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+    - ""
+    - "&7Welcome, &f%player%"
     - "&7Online: &b%online% &7| &7TPS: &a%tps%"
     - "&7Your Group: &b%luckperms-primary-group%"
     - "&7Balance: &6$%vault_eco_balance%"
   footer:
-    - "&eWebsite: &bwww.githaven.net &7| &eDiscord: &bdiscord.githaven.net"
+    - ""
+    - "&7&l⌚ &f%time% &7&l⌚"
+    - ""
+    - "&eWebsite: &bwww.githaven.com &7| &eDiscord: &bdiscord.githaven.com"
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+
+# ✦------------ World-Specific Settings ------------✦
 
 per-world:
   world1:
     Owner:
       tabprefix: "&0&l[&a&lOwner&0&l] &a"
       tagprefix: "&2&lOwner &a"
+      
+  survival:
+    _DEFAULT_:
+      header:
+        - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &2&lSURVIVAL WORLD &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+        - ""
+        - "&7Welcome to &2Survival Mode"
+        - "&7Players in world: &a%worldonline%"
+        - "&7Your Balance: &6$%vault_eco_balance%"

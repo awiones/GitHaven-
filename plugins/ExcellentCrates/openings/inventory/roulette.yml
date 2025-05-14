@@ -1,0 +1,46 @@
+Settings:
+  Menu_Type: generic_9x5
+  Title: <black>Opening %crate_name%...</black>
+  Mode: NORMAL
+  WinSlots: '20'
+  # Sets max. amount of the opening ticks while players can skip the opening animation.
+  # Set to -1 to disable (no skip).
+  Max_Ticks_To_Skip: 40
+  # Sets how soon (in ticks) animation GUI will be closed when completed.
+  # [1 second = 20 ticks]
+  # [Default is 20 ticks]
+  Completion_Pause_Ticks: 40
+  RunOnLaunch:
+    REWARD:
+      main:
+        SpinnerId: default
+        Mode: SEQUENTAL
+        Slots: 39,40,41,33,24,15,5,4,3,11,20,29
+        SpinTimes: '75:1:0:10:1'
+        Sound: block.note_block.banjo
+Content:
+  Default:
+    background:
+      Item:
+        Material: black_stained_glass_pane
+        Lore: []
+      Slots: 0,1,2,3,4,5,6,7,8,9,10,11,15,16,17,18,19,20,24,25,26,27,28,29,33,34,35,36,37,38,39,40,41,42,43,44,12,13,14,22,23,30,31,32
+    arrow_right:
+      Item:
+        Material: player_head
+        Display_Name: <lred><b>YOUR PRIZE →</b></lred>
+        Lore: []
+        SkinURL: a6af217aeddf0f40064969ebb2042f7aeafbc7d0f175a27624133a3befd10281
+      Slots: '19'
+    arrow_left:
+      Item:
+        Material: player_head
+        Display_Name: <lred><b>← YOUR PRIZE</b></lred>
+        Lore: []
+        SkinURL: 1c5a8aa8a4c03600a2b5a4eb6beb51d590260b095ee1cdaa976b09bdfe5661c6
+      Slots: '21'
+Spinners:
+  REWARD:
+    default:
+      Rarities:
+      - '*'

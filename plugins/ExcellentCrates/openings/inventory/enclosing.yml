@@ -1,0 +1,122 @@
+Settings:
+  Menu_Type: generic_9x5
+  Title: <black>Opening %crate_name%...</black>
+  Mode: NORMAL
+  WinSlots: '22'
+  # Sets max. amount of the opening ticks while players can skip the opening animation.
+  # Set to -1 to disable (no skip).
+  Max_Ticks_To_Skip: 40
+  # Sets how soon (in ticks) animation GUI will be closed when completed.
+  # [1 second = 20 ticks]
+  # [Default is 20 ticks]
+  Completion_Pause_Ticks: 40
+  RunOnLaunch:
+    REWARD:
+      dummy_2:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 1,10,19,28,37,7,16,25,34,43
+        SpinTimes: '9:2:0:0:0'
+      dummy_1:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 0,9,18,27,36,8,17,26,35,44
+        SpinTimes: '6:2:0:0:0'
+      dummy_4:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 3,5,39,41
+        SpinTimes: '15:2:0:0:0'
+      dummy_3:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 2,11,20,29,38,6,15,24,33,42
+        SpinTimes: '12:2:0:0:0'
+      dummy_6:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 12,21,30,14,23,32
+        SpinTimes: '21:2:0:0:0'
+      dummy_5:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 4,40
+        SpinTimes: '18:2:0:0:0'
+      dummy_7:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: 13,31
+        SpinTimes: '24:2:0:0:0'
+      real:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: '22'
+        SpinTimes: '25:2:0:0:0'
+        Sound: block.note_block.xylophone
+    ANIMATION:
+      gray_3:
+        SpinnerId: fill_gray
+        Mode: SYNCRHONIZED
+        Slots: 4,40
+        SpinTimes: '1:1:37:0:0'
+        Sound: block.piston.extend
+      white_1:
+        SpinnerId: fill_white
+        Mode: SYNCRHONIZED
+        Slots: 12,21,30,14,23,32
+        SpinTimes: '1:1:43:0:0'
+        Sound: block.piston.extend
+      black_2:
+        SpinnerId: fill_black
+        Mode: SYNCRHONIZED
+        Slots: 1,10,19,28,37,7,16,25,34,43
+        SpinTimes: '1:1:19:0:0'
+        Sound: block.piston.extend
+      gray_2:
+        SpinnerId: fill_gray
+        Mode: SYNCRHONIZED
+        Slots: 3,5,39,41
+        SpinTimes: '1:1:31:0:0'
+        Sound: block.piston.extend
+      black_1:
+        SpinnerId: fill_black
+        Mode: SYNCRHONIZED
+        Slots: 0,9,18,27,36,8,17,26,35,44
+        SpinTimes: '1:1:13:0:0'
+        Sound: block.piston.extend
+      gray_1:
+        SpinnerId: fill_gray
+        Mode: SYNCRHONIZED
+        Slots: 2,11,20,29,38,6,15,24,33,42
+        SpinTimes: '1:1:25:0:0'
+        Sound: block.piston.extend
+      white_2:
+        SpinnerId: fill_white
+        Mode: SYNCRHONIZED
+        Slots: 13,31
+        SpinTimes: '1:1:49:0:0'
+        Sound: block.piston.extend
+Spinners:
+  REWARD:
+    default:
+      Rarities:
+      - '*'
+  ANIMATION:
+    fill_white:
+      Items:
+        pane:
+          Chance: 100.0
+          Material: white_stained_glass_pane
+          Lore: []
+    fill_gray:
+      Items:
+        pane:
+          Chance: 100.0
+          Material: gray_stained_glass_pane
+          Lore: []
+    fill_black:
+      Items:
+        pane:
+          Chance: 100.0
+          Material: black_stained_glass_pane
+          Lore: []

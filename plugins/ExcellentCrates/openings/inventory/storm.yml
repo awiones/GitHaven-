@@ -1,0 +1,108 @@
+Settings:
+  Menu_Type: generic_9x6
+  Title: <black>Opening %crate_name%...</black>
+  Mode: NORMAL
+  WinSlots: '49'
+  # Sets max. amount of the opening ticks while players can skip the opening animation.
+  # Set to -1 to disable (no skip).
+  Max_Ticks_To_Skip: 40
+  # Sets how soon (in ticks) animation GUI will be closed when completed.
+  # [1 second = 20 ticks]
+  # [Default is 20 ticks]
+  Completion_Pause_Ticks: 40
+  RunOnLaunch:
+    REWARD:
+      real:
+        SpinnerId: default
+        Mode: INDEPENDENT
+        Slots: '49'
+        SpinTimes: 1:1:83:0:0
+        Sound: block.amethyst_block.resonate
+    ANIMATION:
+      cloud_1_down:
+        SpinnerId: cloud
+        Mode: SEQUENTAL
+        Slots: 9,10,11,12,13
+        SpinTimes: '5:5:9:0:0'
+      cloud_1_up:
+        SpinnerId: cloud
+        Mode: SEQUENTAL
+        Slots: 1,2,3
+        SpinTimes: '3:5:18:0:0'
+      cloud_2_up:
+        SpinnerId: cloud
+        Mode: SEQUENTAL
+        Slots: 8,7,6,5
+        SpinTimes: '4:5:9:0:0'
+      clouds_2_down:
+        SpinnerId: cloud
+        Mode: SEQUENTAL
+        Slots: 17,16,15
+        SpinTimes: '3:5:15:0:0'
+      cloud_2_down_clear_corner:
+        SpinnerId: clear
+        Mode: SEQUENTAL
+        Slots: '17'
+        SpinTimes: '1:1:30:0:0'
+      rain_sound:
+        SpinnerId: clear
+        Mode: INDEPENDENT
+        Slots: '-1'
+        SpinTimes: '1:5:30:0:0'
+        Sound: weather.rain.above
+      thunder_1:
+        SpinnerId: thunder
+        Mode: SEQUENTAL
+        Slots: 19,29,38,48
+        SpinTimes: '4:4:52:0:0'
+      thunder_1_sound:
+        SpinnerId: clear
+        Mode: INDEPENDENT
+        Slots: '-1'
+        SpinTimes: 1:1:66:0:0
+        Sound: entity.lightning_bolt.impact
+      thunder_1_clear:
+        SpinnerId: clear
+        Mode: INDEPENDENT
+        Slots: 19,29,38,48
+        SpinTimes: 1:1:71:0:0
+      thunder_2:
+        SpinnerId: thunder
+        Mode: SEQUENTAL
+        Slots: 24,33,41,50
+        SpinTimes: 4:4:68:0:0
+      thunder_2_sound:
+        SpinnerId: clear
+        Mode: INDEPENDENT
+        Slots: '-1'
+        SpinTimes: 1:1:82:0:0
+        Sound: entity.lightning_bolt.impact
+      thunder_2_clear:
+        SpinnerId: clear
+        Mode: INDEPENDENT
+        Slots: 24,33,41,50
+        SpinTimes: 1:1:87:0:0
+Spinners:
+  REWARD:
+    default:
+      Rarities:
+      - '*'
+  ANIMATION:
+    cloud:
+      Items:
+        cloud:
+          Chance: 100.0
+          Material: white_stained_glass_pane
+          Lore: []
+    clear:
+      Items:
+        clear:
+          Chance: 100.0
+          Material: air
+          Amount: 0
+    thunder:
+      Items:
+        thunder:
+          Chance: 100.0
+          Material: yellow_stained_glass_pane
+          Lore: []

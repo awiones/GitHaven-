@@ -1,0 +1,8 @@
+Name: 827 Key
+Virtual: false
+ItemData:
+  Type: VANILLA
+  Tag:
+    Value: '{components:{"minecraft:custom_name":''{"extra":["827 Key"],"text":""}''},count:1,id:"minecraft:tripwire_hook"}'
+    DataVersion: 3955
+ItemStackable: false

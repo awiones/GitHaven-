@@ -1,4 +1,4 @@
-location: lobby-githaven:0.668:-16.456:-10.507
+location: lobby-githaven:0.370:-16.456:-10.753
 enabled: true
 display-range: 48
 update-range: 48
@@ -8,5 +8,9 @@ down-origin: false
 pages:
 - lines:
   - content: '&7Welcome &fto &bGitHaven'
+    height: 0.3
+  - content: '&7A &bquiet &7place to &abuild&7, &dvibe&7, and just &echill.'
+    height: 0.3
+  - content: '&aWe''re &bglad &ato &fhave &eyou &ahere.'
     height: 0.3
   actions: {}

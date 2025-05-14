@@ -1,73 +1,85 @@
-#✦------------------------------------------------------✦
-#|                   Scoreboard Config                   |
-#✦------------------------------------------------------✦
-# RealScoreboard created by joserodpt and maintained by Neziw
-# Parameter explanation:
-# - Default: if the scoreboard is the default one, doesn't require a permission
-# - Default-World: the default world where the scoreboard appears
-# - Display-Name: used for GUI and other purposes.
-# - Refresh-Scoreboard: the main refresh delay for the whole scoreboard
-# - Refresh-Title: refresh delay only for the scoreboard title
-# - Title-Loop-Delay: loop delay for the title animation task
-# - Board-Loop-Delay: loop delay for the bards switching task (if the scoreboard has multiple boards)
+#⋆。°✩₊˚⊹♡⋆｡˚☽˚｡⋆ GitHaven RealScoreboard ⋆｡˚☾˚｡⋆♡⊹˚₊✩°。⋆
+#
+# RealScoreboard v3 Configuration
+# Created by joserodpt | Maintained by Neziw
+#
+# Configuration Guide:
+# - Default: If true, this scoreboard displays without requiring permissions
+# - Default-World: The primary world where this scoreboard appears
+# - Display-Name: Name shown in GUI and admin interfaces
+# - Refresh Options: Control timing of various update mechanisms
+#   
+
 Version: 3
+
 Scoreboards:
   default:
+    # Basic Configuration
     Default: true
     Default-World: world
     Other-Worlds:
-    - '*'
-    Display-Name: '&6GitHaven Board'
+      - '*'
+    Display-Name: '&6&lGitHaven &f&lNetwork'
     Permission: none
+    
+    # Global Refresh Settings
     Refresh:
-      Scoreboard: 1 # Update every second for real-time ping
-      Title: 10
+      Scoreboard: 1    # Updates player stats every second
+      Title: 10        # Title refresh rate in seconds
       Title-Loop-Delay: 5
       Board-Loop-Delay: 30
+    
+    # Board Configurations
     Boards:
       Board1:
+        # Animated Title Configuration
         Title:
-        - 'Welcome to'
-        - 'Welcome to &6G'
-        - 'Welcome to &6Gi'
-        - 'Welcome to &6Git'
-        - 'Welcome to &6GitH'
-        - 'Welcome to &6GitHa'
-        - 'Welcome to &6GitHav'
-        - 'Welcome to &6GitHave'
-        - 'Welcome to &6GitHaven'
-        - 'Welcome to &6GitHaven'
-        - 'Welcome to &6GitHave'
-        - 'Welcome to &6GitHav'
-        - 'Welcome to &6GitHa'
-        - 'Welcome to &6GitH'
-        - 'Welcome to &6Git'
-        - 'Welcome to &6Gi'
-        - 'Welcome to &6G'
-        - 'Welcome to'
-        Title-Loop-Delay: 5 # Animation delay for typing effect
+          - '&f&lWelcome to'
+          - '&f&lWelcome to &6&lG'
+          - '&f&lWelcome to &6&lGi'
+          - '&f&lWelcome to &6&lGit'
+          - '&f&lWelcome to &6&lGitH'
+          - '&f&lWelcome to &6&lGitHa'
+          - '&f&lWelcome to &6&lGitHav'
+          - '&f&lWelcome to &6&lGitHave'
+          - '&f&lWelcome to &6&lGitHaven'
+          - '&f&lWelcome to &6&lGitHaven'
+          - '&f&lWelcome to &6&lGitHaven'
+          - '&f&lWelcome to &6&lGitHave'
+          - '&f&lWelcome to &6&lGitHav'
+          - '&f&lWelcome to &6&lGitHa'
+          - '&f&lWelcome to &6&lGitH'
+          - '&f&lWelcome to &6&lGit'
+          - '&f&lWelcome to &6&lGi'
+          - '&f&lWelcome to &6&lG'
+          - '&f&lWelcome to'
+        
+        # Content Lines
         Lines:
-        - '%blank%'
-        - ' &7Player: &f%playername%'
-        - ' &7Ping: &f%ping%'
-        - '%blank%'
-        - ' &7Balance: &f%money%'
-        - ' &7Kills: &f%kills% &8| &7Deaths: &f%deaths%'
-        - '%blank%'
-        - ' &7Online: &f%online%&8/&f%maxplayers%'
-        - '%blank%'
-        - ' &7Server IP: &bplay.githaven.com'
-        - '%blank%'
+          - '&7&m━━━━━━━━━━━━━━━━━━━━'
+          - '&e➤ &7Player: &f%playername%'
+          - '&e➤ &7Ping: &f%ping%'
+          - '&7&m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈'
+          - '&e➤ &7Balance: &a$%vault_eco_balance%'
+          - '&e➤ &7Kills: &a%kills% &8| &7Deaths: &c%deaths%'
+          - '&7&m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈'
+          - '&e➤ &7Online: &f%online%&8/&f%maxplayers%'
+          - '&7&m━━━━━━━━━━━━━━━━━━━━'
+          - '&b✦ &e147.185.221.28:21960 &b✦'
+        
+        # Animation Settings
         Animations:
           Enabled: true
-          Interval: 5 # Animation interval in ticks
+          Interval: 5
           Frames:
-            - '&6Welcome to &bGitHaven'
-            - '&eYour Ultimate Minecraft Experience'
-            - '&6Enjoy &bYour Stay!'
-            - '&6Play Now on &bGitHaven!'
+            - '&6✦ &b&lGitHaven Network &6✦'
+            - '&e✦ &b&lYour Ultimate MC Experience &e✦'
+            - '&6✦ &b&lEnjoy Your Stay! &6✦'
+            - '&e✦ &b&lJoin our Discord! &e✦'
+        
+        # Board-specific Refresh Settings
         Refresh:
-          Scoreboard: 1 # Update every second for real-time ping
-          Title: 10
-          Title-Loop-Delay: 5
+          Scoreboard: 1
+          Title: 5
+          Title-Loop-Delay: 3
           Board-Loop-Delay: 30

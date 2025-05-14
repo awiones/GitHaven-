@@ -1,3 +1,10 @@
+# ✦═════════════════════✦
+# ║   TAB Animations    ║
+# ✦═════════════════════✦
+# Configuration by Claude | May 13, 2025
+# animations.yml file for TAB plugin
+
+# Moving line animation
 MyAnimation1:
   change-interval: 100
   texts:
@@ -30,81 +37,122 @@ MyAnimation1:
     - '&3--&d-&3------------'
     - '&3-&d-&3-------------'
     - '&d-&3--------------'
+
+# Server name with rotating colors and formatting
 ServerName:
   change-interval: 300
   texts:
-  - '&c&lServerName'
-  - '&c&n&lServerName'
-  - '&b&lServerName'
-  - '&b&l&nServerName'
-  - '&e&lServerName'
-  - '&e&n&lServerName'
+    - '&6&lGITHAVEN'
+    - '&6&n&lGITHAVEN'
+    - '&e&lGITHAVEN'
+    - '&e&l&nGITHAVEN'
+    - '&b&lGITHAVEN'
+    - '&b&n&lGITHAVEN'
+
+# Website animation with character highlighting
 web:
   change-interval: 200
   texts:
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&6w&eww.domain.com'
-  - '&ew&6w&ew.domain.com'
-  - '&eww&6w&e.domain.com'
-  - '&ewww&6.&edomain.com'
-  - '&ewww.&6d&eomain.com'
-  - '&ewww.d&6o&emain.com'
-  - '&ewww.do&6m&eain.com'
-  - '&ewww.dom&6a&ein.com'
-  - '&ewww.doma&6i&en.com'
-  - '&ewww.domai&6n&e.com'
-  - '&ewww.domain&6.&ecom'
-  - '&ewww.domain.&6c&eom'
-  - '&ewww.domain.c&6o&em'
-  - '&ewww.domain.co&6m'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
-  - '&ewww.domain.com'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+    - '&6p&elay.githaven.com'
+    - '&ep&6l&eay.githaven.com'
+    - '&epl&6a&ey.githaven.com'
+    - '&epla&6y&e.githaven.com'
+    - '&eplay&6.&egithaven.com'
+    - '&eplay.&6g&eithaven.com'
+    - '&eplay.g&6i&ethaven.com'
+    - '&eplay.gi&6t&ehaven.com'
+    - '&eplay.git&6h&eaven.com'
+    - '&eplay.gith&6a&even.com'
+    - '&eplay.githa&6v&een.com'
+    - '&eplay.githav&6e&en.com'
+    - '&eplay.githave&6n&e.com'
+    - '&eplay.githaven&6.&ecom'
+    - '&eplay.githaven.&6c&eom'
+    - '&eplay.githaven.c&6o&em'
+    - '&eplay.githaven.co&6m'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+    - '&eplay.githaven.com'
+
+# Vote page animation with alternating colors
 vote:
   change-interval: 1000
   texts:
-  - '&avote.domain.com'
-  - '&a&nvote.domain.com'
-  - '&5vote.domain.com'
-  - '&5&nvote.domain.com'
+    - '&avote.githaven.com'
+    - '&a&nvote.githaven.com'
+    - '&5vote.githaven.com'
+    - '&5&nvote.githaven.com'
+
+# Typing welcome animation
 Welcome:
   change-interval: 400
   texts:
-  - '&7&lW_'
-  - '&7&lW_'
-  - '&7&lWe_'
-  - '&7&lWel_'
-  - '&7&lWelc_'
-  - '&7&lWelco_'
-  - '&7&lWelcom_'
-  - '&7&lWelcome_'
-  - '&7&lWelcome_'
-  - '&7&lWelcome_'
-  - '&7&lWelcome_'
-  - '&7&lWelcom_'
-  - '&7&lWelco_'
-  - '&7&lWelc_'
-  - '&7&lWel_'
-  - '&7&lWe_'
-  - '&7&lW_'
-  - '&7&lW_'
+    - '&f&lW_'
+    - '&f&lW_'
+    - '&f&lWe_'
+    - '&f&lWel_'
+    - '&f&lWelc_'
+    - '&f&lWelco_'
+    - '&f&lWelcom_'
+    - '&f&lWelcome_'
+    - '&f&lWelcome_'
+    - '&f&lWelcome_'
+    - '&f&lWelcome_'
+    - '&f&lWelcom_'
+    - '&f&lWelco_'
+    - '&f&lWelc_'
+    - '&f&lWel_'
+    - '&f&lWe_'
+    - '&f&lW_'
+    - '&f&lW_'
+
+# Time and date alternating display
 time:
   change-interval: 3000
   texts:
-    - '&7Time &b%time%'
-    - '&7Date &b%date%'
+    - '&7Time &e%time%'
+    - '&7Date &e%date%'
+
+# Cycling bar colors
 barcolors:
   change-interval: 1000
   texts:
+    - YELLOW
+    - GOLD
     - RED
     - BLUE
     - GREEN
-    - YELLOW
+
+# Rainbow effect animation
+rainbow:
+  change-interval: 300
+  texts:
+    - '&c✦&6✦&e✦&a✦&b✦&9✦&d✦'
+    - '&d✦&c✦&6✦&e✦&a✦&b✦&9✦'
+    - '&9✦&d✦&c✦&6✦&e✦&a✦&b✦'
+    - '&b✦&9✦&d✦&c✦&6✦&e✦&a✦'
+    - '&a✦&b✦&9✦&d✦&c✦&6✦&e✦'
+    - '&e✦&a✦&b✦&9✦&d✦&c✦&6✦'
+    - '&6✦&e✦&a✦&b✦&9✦&d✦&c✦'
+
+# Loading animation
+loading:
+  change-interval: 200
+  texts:
+    - '&a▌&7▌▌▌▌▌▌▌▌▌'
+    - '&a▌▌&7▌▌▌▌▌▌▌▌'
+    - '&a▌▌▌&7▌▌▌▌▌▌▌'
+    - '&a▌▌▌▌&7▌▌▌▌▌▌'
+    - '&a▌▌▌▌▌&7▌▌▌▌▌'
+    - '&a▌▌▌▌▌▌&7▌▌▌▌'
+    - '&a▌▌▌▌▌▌▌&7▌▌▌'
+    - '&a▌▌▌▌▌▌▌▌&7▌▌'
+    - '&a▌▌▌▌▌▌▌▌▌&7▌'
+    - '&a▌▌▌▌▌▌▌▌▌▌'
+

@@ -1,0 +1,16 @@
+location: lobby-githaven:-15.233:-16.257:16.421
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&a&lWelcome to the Grand Bazaar!'
+    height: 0.3
+  - content: '&b&lYou can buy everything from Skyblock'
+    height: 0.3
+  - content: '&a&land SMP at this bazaar!'
+    height: 0.3
+  actions: {}

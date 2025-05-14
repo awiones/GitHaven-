@@ -1,0 +1,96 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 1
+npc:
+  '0':
+    name: Shop Skyblock
+    uuid: 75a39e5b-43c5-49c4-b692-ced6b679cce7
+    traits:
+      commandtrait:
+        commands:
+          '0':
+            command: opencmd menu.yml
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomSwitchTargets: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      location:
+        bodyYaw: 127.347015
+        world: lobby-githaven
+        x: -35.34
+        y: -19.0
+        z: 23.7
+        yaw: 147.347
+        pitch: 0.0
+      owner:
+        uuid: 2e3183ef-c877-49ba-aef1-c3e6ea4a4ec3
+      skintrait: {}
+      spawned: false
+      type: PLAYER
+    traitnames: location,spawned,owner,rotationtrait,inventory,type,commandtrait,lookclose,skintrait,scoreboardtrait
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '1':
+    name: Shop SMP
+    uuid: 0076bc09-562e-448f-8f3d-f44f4ce6b8d1
+    traits:
+      commandtrait:
+        commands:
+          '0':
+            command: say Hello, I am NPC <npc>
+            hand: RIGHT
+            player: false
+            npc: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 10.0
+        enabled: true
+        randomSwitchTargets: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      location:
+        bodyYaw: 85.74832
+        world: lobby-githaven
+        x: -34.3
+        y: -14.0
+        z: 21.5155
+        yaw: 85.7483
+        pitch: 0.0
+      owner:
+        uuid: 2e3183ef-c877-49ba-aef1-c3e6ea4a4ec3
+      skintrait: {}
+      spawned: false
+      type: PLAYER
+    traitnames: location,spawned,owner,rotationtrait,inventory,type,commandtrait,lookclose,skintrait,scoreboardtrait
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false

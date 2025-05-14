@@ -1,4 +1,4 @@
-location: lobby-githaven:13.339:-16.467:16.561
+location: lobby-githaven:13.688:-16.466:16.251
 enabled: true
 display-range: 48
 update-range: 48
@@ -7,6 +7,8 @@ facing: 0.0
 down-origin: false
 pages:
 - lines:
-  - content: '&fGet in the &dportal &fto go to the &bSkyblock!'
+  - content: '&b&lBehind this portal lies the Skyblock Lobby!'
+    height: 0.3
+  - content: '&a&lFind everything you need: food, shops, and more!'
     height: 0.3
   actions: {}

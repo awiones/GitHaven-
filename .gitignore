@@ -1,0 +1,70 @@
+# Minecraft server .gitignore
+# Ignore world data and player data
+data/
+logs/
+cache/
+*.log
+*.lck
+*.lock
+*.tmp
+*.bak
+*.old
+*.dat
+*.dat_old
+*.mca
+*.mcr
+*.zip
+*.gz
+*.jar
+*.db
+*.sqlite
+*.sqlite3
+*.pid
+*.pid.lock
+*.pidfile
+*.swp
+*.swo
+*.swn
+*.tmp
+*.temp
+*.out
+*.class
+*.iml
+*.ipr
+*.iws
+*.idea/
+.DS_Store
+Thumbs.db
+# Minecraft server specific
+crash-reports/
+usercache.json
+whitelist.json
+banned-ips.json
+banned-players.json
+ops.json
+session.lock
+# Plugin data
+plugins/*/data/
+plugins/*/logs/
+plugins/*/cache/
+plugins/*/backups/
+plugins/*/temp/
+plugins/*/tmp/
+# Build tools and dependencies
+BuildData/
+bundler/
+libraries/
+versions/
+work/
+apache-maven-*/
+# Ignore server properties and EULA (optional, comment out if you want to track these)
+#server.properties
+#eula.txt
+# Ignore IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db

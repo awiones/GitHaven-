@@ -1,0 +1,849 @@
+RewardSortMode:
+  WEIGHT: Weight
+  RARITY: Rarity
+  CHANCE: Chance
+  NAME: Name
+  ITEM: Item
+Command:
+  Argument:
+    Name:
+      Crate: crate
+      Key: key
+      X: x
+      Y: y
+      Z: z
+  Editor:
+    Desc: Open editor GUI.
+  Drop:
+    Desc: Spawn crate item in the world.
+    Done: <lgray>Dropped <lyellow>%crate_name%</lyellow> at <lyellow>%location_x%, %location_y%, %location_z%</lyellow> in <lyellow>%location_world%</lyellow>.</lgray>
+  DropKey:
+    Desc: Spawn key item in the world.
+    Done: <lgray>Dropped <lyellow>%key_name%</lyellow> at <lyellow>%location_x%, %location_y%, %location_z%</lyellow> in <lyellow>%location_world%</lyellow>.</lgray>
+  Open:
+    Desc: Open a crate.
+  OpenFor:
+    Desc: Open crate for a player.
+    Done: <lgray>Opened <lyellow>%crate_name%</lyellow> for <lyellow>%player_name%</lyellow>.</lgray>
+    Notify: <lgray>You have been forced to open <lyellow>%crate_name%</lyellow>.</lgray>
+  Give:
+    Desc: Gives crate to a player.
+    Done: <lgray>Given <lyellow>x%amount%</lyellow> of <lyellow>%crate_name%</lyellow> crate(s) to <lyellow>%player_name%</lyellow>.</lgray>
+    Notify: <lgray>You recieved <lyellow>x%amount%</lyellow> of <lyellow>%crate_name%</lyellow>.</lgray>
+  Key:
+    Desc: Manage player's keys.
+    Give:
+      Desc: Give key to a player.
+      Done: <lgray>Given <lyellow>x%amount%</lyellow> of <lyellow>%key_name%</lyellow> key(s) to <lyellow>%player_name%</lyellow>.</lgray>
+      Notify: <lgray>You recieved <lyellow>x%amount%</lyellow> of <lyellow>%key_name%</lyellow>!</lgray>
+    Take:
+      Desc: Take key from a player.
+      Done: <lgray>Taken <lyellow>x%amount%</lyellow> of <lyellow>%key_name%</lyellow> key(s) from <lyellow>%player_name%</lyellow>.</lgray>
+      Notify: <lgray>You lost <lred>x%amount%</lred> <lred>%key_name%</lred>.</lgray>
+    Set:
+      Desc: Set keys amount for a player.
+      Done: <lgray>Set <lyellow>x%amount%</lyellow> of <lyellow>%key_name%</lyellow> key(s) for <lyellow>%player_name%</lyellow>.</lgray>
+      Notify: <lgray>Your <lyellow>%key_name%</lyellow>'s amount has been changed to <lyellow>x%amount%</lyellow>.</lgray>
+    Show:
+      Desc: Inspect [player's] virtual keys.
+      Format:
+        List:
+        - <noprefix>
+        - ' '
+        - '<lyellow><b>%player_name%''s Virtual Keys: </b></lyellow>'
+        - '%entry%'
+        - ' '
+        Entry: '<lyellow>▪ <lgray>%key_name%: </lgray>x%amount%</lyellow>'
+    GiveAll:
+      Desc: Give key to all online players.
+      Done: <lgray>Given <lyellow>x%amount%</lyellow> of <lyellow>%key_name%</lyellow> key(s) to <lyellow>All Players</lyellow>.</lgray>
+  Preview:
+    Desc: Open crate preview.
+    Done:
+      Others: <lgray>Opened <lyellow>%crate_name%</lyellow> preview for <lyellow>%player_display_name%</lyellow>.</lgray>
+  ResetCooldown:
+    Desc: Reset player's crate open cooldown.
+    Done: <lgray>Reset <lyellow>%player_name%</lyellow>'s open cooldown for <lyellow>%crate_name%</lyellow>.</lgray>
+  Menu:
+    Desc: Open crate menu.
+    Done:
+      Others: <lgray>Opened crates menu for <lyellow>%player_display_name%</lyellow>.</lgray>
+Error:
+  Command:
+    Argument:
+      InvalidCrate: <lgray><lred>%value%</lred> is not a valid crate!</lgray>
+      InvalidKey: <lgray><lred>%value%</lred> is not a valid key!</lgray>
+Crate:
+  Open:
+    Error:
+      InventorySpace:
+      - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+      - <lred><b>Inventory is Full!</b></lred>
+      - <lgray>Clean up inventory to open crates.</lgray>
+      Cooldown:
+        Temporary:
+        - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+        - <lred><b>Crate is on Cooldown!</b></lred>
+        - <lgray>You can open it in <lred>%time%</lred></lgray>
+        OneTimed:
+        - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+        - <lred><b>Whoops!</b></lred>
+        - <lgray>You already have opened this one-timed crate!</lgray>
+      NoKey:
+      - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+      - <lred><b>Whoops!</b></lred>
+      - <lgray>You don't have a key for this crate!</lgray>
+      NoHoldKey:
+      - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+      - <lred><b>Whoops!</b></lred>
+      - <lgray>You must hold a key to open a crate!</lgray>
+      NoRewards:
+      - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+      - <red><b>Whoops!</b></red>
+      - <lgray>There are no rewards for you! Try later.</lgray>
+      TooExpensive:
+      - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+      - <lred><b>Whoops!</b></lred>
+      - <lgray>You need <lred>%crate_open_cost%</lred> to open it!</lgray>
+      Already:
+      - <output:"titles:20:80:20"><sound:"entity.villager.no:0.6:1.0">
+      - <red><b>Whoops!</b></red>
+      - <lgray>You're already opening a crate!</lgray>
+    Reward:
+      Info:
+      - <noprefix>
+      - <lgray>You won <lgreen>%reward_name%</lgreen> from the <lgreen>%crate_name%</lgreen>!</lgray>
+      Broadcast:
+      - <noprefix><sound:"block.note_block.bell:0.6:1.0">
+      - ' '
+      - <gray><lpurple>%player_display_name%</lpurple> opened <lpurple>%crate_name%</lpurple> and received <lpurple>%reward_name%</lpurple>!</gray>
+      - ' '
+      - '<gray>Purchase keys: <click:open_url:"https://spigotmc.org/"><lpurple>[Click to open Store]</lpurple></click></gray>'
+      - ' '
+    Milestone:
+      Completed:
+      - <noprefix>
+      - <sound:"entity.player.levelup:0.6:1.0">
+      - <lgray>You completed <lgreen>%milestone_openings% Openings </lgreen>milestone and got <lgreen>%reward_name%</lgreen> as reward!</lgray>
+  Preview:
+    Error:
+      Cooldown: <lgray>You can preview this crate again in <lred>%time%</lred></lgray>
+  Create:
+    Error:
+      Duplicated: <lred>Crate with such ID already exists!</lred>
+Key:
+  Create:
+    Error:
+      Duplicated: <lred>Key with such ID already exists!</lred>
+Other:
+  Cooldown:
+    Ready: <lgreen>Ready to Open!</lgreen>
+  LastOpener:
+    Empty: '-'
+  LastReward:
+    Empty: '-'
+  NextMilestone:
+    Empty: '-'
+  Midnight: Midnight
+  Free: Free
+  BrokenItem:
+    Name: <lred><b>< Invalid Item ></b></lred>
+    Description:
+    - <lgray>This item wasn't parsed properly.</lgray>
+    - <lgray>Check console logs for details.</lgray>
+    Formatted: true
+Inspection:
+  Problems: '%amount% problem(s)'
+  NoProblems: No problems found
+Editor:
+  Title:
+    Main: <black>ExcellentCrates Editor</black>
+    ItemSave: <black>Item Save Method</black>
+    Crates: <black>Crates Editor</black>
+    Crate:
+      Settings: <black>Crate Settings</black>
+      OpenCosts: <black>Crate Open Costs</black>
+      Milestones: <black>Crate Milestones</black>
+      Effect: <black>Crate Effect</black>
+      Placement: <black>Crate Placement</black>
+    Reward:
+      List: <black>Crate Rewards</black>
+      Creation: <black>Reward Creator</black>
+      Content: <black>Reward Items</black>
+      Settings: <black>Reward Settings</black>
+      Limits: <black>Reward Limits</black>
+      Sort: <black>Reward Sorting</black>
+    Keys: <black>Keys Editor</black>
+    Key:
+      Settings: <black>Key Settings</black>
+  Enter:
+    DisplayName: <lgray>Enter <lgreen>[Display Name]</lgreen></lgray>
+    Text: <lgray>Enter <lgreen>[Text]</lgreen></lgray>
+    Amount: <lgray>Enter <lgreen>[Amount]</lgreen></lgray>
+    Value: <lgray>Enter <lgreen>[Value]</lgreen></lgray>
+  Crate:
+    Enter:
+      Seconds: <lgray>Enter <lgreen>[Seconds Amount]</lgreen></lgray>
+      Id: <lgray>Enter <lgreen>[Crate Identifier]</lgreen></lgray>
+      ModelName: <lgray>Enter <lgreen>[Model Name]</lgreen></lgray>
+      Particle:
+        Name: <lgray>Enter <lgreen>[Particle Name]</lgreen></lgray>
+      KeyId: <lgray>Enter <lgreen>[Key Identifier]</lgreen></lgray>
+      BlockLocation: <lgray>Click a <lgreen>[Block] </lgreen> to assign crate.</lgray>
+      HologramTemplate: <lgray>Enter <lgreen>[Hologram Template]</lgreen></lgray>
+      AnimationConfig: <lgray>Enter <lgreen>[Animation Name]</lgreen></lgray>
+      PreviewConfig: <lgray>Enter <lgreen>[Preview Name]</lgreen></lgray>
+      Currency: <lgray>Enter <lgreen>[Currency ID]</lgreen></lgray>
+  Reward:
+    Enter:
+      Chance: <lgray>Enter <lgreen>[Weight]</lgreen></lgray>
+      Command: <lgray>Enter <lgreen>[Command]</lgreen></lgray>
+      Id: <lgray>Enter <lgreen>[Reward Identifier]</lgreen></lgray>
+      Rarity: <lgray>Enter <lgreen>[Rarity]</lgreen></lgray>
+      Permissions: <lgray>Enter <lgreen>[Permission Node]</lgreen></lgray>
+  Button:
+    Crate:
+      ItemStackable:
+        Name: Item Stackable
+        Description:
+        - Controls whether crate item is stackable.
+        Formatted: true
+        CurrentInfo:
+          Current: '%crate_item_stackable%'
+        ClickActions:
+          LEFT: toggle
+    Key:
+      ItemStackable:
+        Name: Item Stackable
+        Description:
+        - Controls whether key item is stackable.
+        Formatted: true
+        CurrentInfo:
+          Current: '%key_item_stackable%'
+        ClickActions:
+          LEFT: toggle
+    Reward:
+      SortMode:
+        Name: '%mode%'
+        Description:
+        - Sort reward by their <lyellow>%mode%</lyellow>.
+        Formatted: true
+        ClickActions:
+          LEFT: ascending
+          RIGHT: descending
+    ItemType:
+      ByNBT:
+        Name: By Pure NBT
+        Description:
+        - Saves item by its NBT data.
+        - ''
+        - <gray><green>✔</green> Saves the whole item NBT data</gray>
+        - <gray>compatible with newer MC versions.</gray>
+        - ''
+        - <gray><red>✘</red> Does <red>not</red> reflect any changes made</gray>
+        - <gray>in its original plugin's configuration.</gray>
+        Formatted: true
+        ClickActions:
+          LEFT: select
+      ByID:
+        Name: By Item ID
+        Description:
+        - Saves item by its unique ID.
+        - ''
+        - <gray><green>✔</green> Always reflects all changes made</gray>
+        - <gray>in its original plugin's configuration.</gray>
+        - ''
+        - <gray><red>✘</red> Does <red>not</red> saves any NBT data</gray>
+        - <gray>added outside of the item configuration.</gray>
+        Formatted: true
+        ClickActions:
+          LEFT: select
+  Item:
+    Crates:
+      Name: <lyellow><b>Crates</b></lyellow>
+      Lore:
+      - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+    Keys:
+      Name: <lyellow><b>Keys</b></lyellow>
+      Lore:
+      - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+    Crate:
+      Object:
+        Name: '%crate_name%'
+        Description:
+        - '%inspection_problems%'
+        Formatted: true
+        CurrentInfo:
+          ID: '%crate_id%'
+        ClickActions:
+          LEFT: navigate
+      Create:
+        Name: <lyellow><b>New Crate</b></lyellow>
+        Lore: []
+      Delete:
+        Name: <lyellow><b><lred>Delete Crate</lred></b></lyellow>
+        Lore:
+        - <lgray>Permanently deletes the crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>delete</lyellow>.</lgray>
+      DisplayName:
+        Name: <lyellow><b>Name</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%crate_name%</lyellow>'
+        - ''
+        - <lgray>Sets crate name.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+      Description:
+        Name: <lyellow><b>Description</b></lyellow>
+        Lore:
+        - '%crate_description%'
+        - ''
+        - <lgray>Sets crate description (lore).</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add line</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      Permission:
+        Name: <lyellow><b>Permission Requirement</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Enabled: </lgray>%crate_permission_required%</lyellow>'
+        - '<lyellow>● <lgray>Permission: </lgray>%crate_permission%</lyellow>'
+        - ''
+        - <lgray>Controls whether permission is</lgray>
+        - <lgray>required to open this crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+      OpenCooldown:
+        Name: <lyellow><b>Open Cooldown</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Cooldown: </lgray>%crate_open_cooldown%</lyellow>'
+        - ''
+        - <lgray>Sets per player cooldown</lgray>
+        - <lgray>for crate openings.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>set cooldown</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>make one-timed</lyellow>.</lgray>
+      Preview:
+        Name: <lyellow><b>Preview</b></lyellow>
+        Lore:
+        - '%inspection_crate_preview%'
+        - ''
+        - '<lyellow>● <lgray>Enabled: </lgray>%crate_preview_enabled%</lyellow>'
+        - '<lyellow>● <lgray>Id: </lgray>%crate_preview_id%</lyellow>'
+        - ''
+        - <lgray>Sets preview GUI for this crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change ID</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>toggle</lyellow>.</lgray>
+      Animation:
+        Name: <lyellow><b>Animation</b></lyellow>
+        Lore:
+        - '%inspection_crate_animation%'
+        - ''
+        - '<lyellow>● <lgray>Enabled: </lgray>%crate_animation_enabled%</lyellow>'
+        - '<lyellow>● <lgray>Id: </lgray>%crate_animation_id%</lyellow>'
+        - ''
+        - <lgray>Sets opening animation for this crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change ID</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>toggle</lyellow>.</lgray>
+      KeyRequirement:
+        Name: <lyellow><b>Key Requirements</b></lyellow>
+        Lore:
+        - '%inspection_crate_key_requirement%'
+        - ''
+        - '<lyellow>● <lgray>Enabled: </lgray>%crate_key_required%</lyellow>'
+        - '<lyellow>● <lgray>Keys: </lgray></lyellow>'
+        - '%crate_key_ids%'
+        - ''
+        - <lgray>Player must have certain keys</lgray>
+        - <lgray>to open this crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add key</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>[Q / Drop] Key to <lyellow>toggle requirement</lyellow>.</lgray>
+      OpenCost:
+        Name: <lyellow><b>Open Cost</b></lyellow>
+        Lore:
+        - '%inspection_crate_open_cost%'
+        - ''
+        - <lgray>Player have to pay certain currencies</lgray>
+        - <lgray>to open this crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Object:
+          Name: <lyellow><b>%name%</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Currency ID: </lgray>%id%</lyellow>'
+          - '<lyellow>● <lgray>Amount: </lgray>%amount%</lyellow>'
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change amount</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove</lyellow>.</lgray>
+        Create:
+          Name: <lyellow><b>Add Cost</b></lyellow>
+          Lore: []
+      InventoryStack:
+        Name: <lyellow><b>Inventory Item</b></lyellow>
+        Lore:
+        - '%inspection_crate_item%'
+        - ''
+        - <lgray>Sets item for this crate.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>replace</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>get item</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>get raw copy</lyellow>.</lgray>
+      Placement:
+        Info:
+          Name: <lyellow><b>Placement</b></lyellow>
+          Lore:
+          - <lgray>Place crate anywhere in the world</lgray>
+          - <lgray>with particle effects and hologram!</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Locations:
+          Name: <lyellow><b>Assigned Blocks</b></lyellow>
+          Lore:
+          - <lgray>%crate_locations%</lgray>
+          - ''
+          - <lgray>Clicking an assigned block will</lgray>
+          - <lgray>preview or open a crate.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>assign block</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+        Pushback:
+          Name: <lyellow><b>Block Pushback</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Status: </lgray>%crate_pushback_enabled%</lyellow>'
+          - ''
+          - <lgray>Pushes players back from the crate</lgray>
+          - <lgray>if they don't met the requirements.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+        HologramToggle:
+          Name: <lyellow><b>Hologram State</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Enabled: </lgray>%crate_hologram_enabled%</lyellow>'
+          - ''
+          - <lgray>Enables a hologram above crate block(s).</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+        HologramTemplate:
+          Name: <lyellow><b>Hologram Template</b></lyellow>
+          Lore:
+          - '%inspection_crate_hologram%'
+          - ''
+          - '<lyellow>● <lgray>Current: </lgray>%crate_hologram_template%</lyellow>'
+          - ''
+          - <lgray>Hologram text depends on</lgray>
+          - <lgray>selected hologram template.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        HologramYOffset:
+          Name: <lyellow><b>Hologram Y Offset</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%crate_hologram_y_offset%</lyellow>'
+          - ''
+          - <lgray>Offsets a hologram by Y</lgray>
+          - <lgray>axis by defined value.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        Effect:
+          Model:
+            Name: <lyellow><b>Effect Model</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%crate_effect_model%</lyellow>'
+            - ''
+            - <lgray>Sets effect model or</lgray>
+            - <lgray>disables the effects.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+            - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>disable</lyellow>.</lgray>
+          Particle:
+            Name: <lyellow><b>Effect Particle</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%crate_effect_particle_name%</lyellow>'
+            - ''
+            - <lgray>Sets effect particles.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+          ParticleData:
+            Name: <lyellow><b>Particle Data</b></lyellow>
+            Lore:
+            - '%inspection_crate_particle_data%'
+            - ''
+            - <lgray>Sets particle options.</lgray>
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>edit</lyellow>.</lgray>
+      Particle:
+        Data:
+          Red:
+            Name: <lyellow><b>Red</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%value%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+          Green:
+            Name: <lyellow><b>Green</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%value%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+          Blue:
+            Name: <lyellow><b>Blue</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%value%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+          Size:
+            Name: <lyellow><b>Size</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%value%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+          Material:
+            Name: <lyellow><b>Material</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%value%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>change</lyellow>.</lgray>
+          Number:
+            Name: <lyellow><b>Number</b></lyellow>
+            Lore:
+            - '<lyellow>● <lgray>Current: </lgray>%value%</lyellow>'
+            - ''
+            - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+      Rewards:
+        Name: <lyellow><b>Rewards</b></lyellow>
+        Lore:
+        - '%inspection_crate_rewards%'
+        - ''
+        - '<lyellow>● <lgray>Amount: </lgray>%crate_rewards_amount%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+      Milestones:
+        Name: <lyellow><b>Milestones</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Milestones: </lgray>%crate_milestones_amount%</lyellow>'
+        - '<lyellow>● <lgray>Repeatable: </lgray>%crate_milestones_repeatable%</lyellow>'
+        - ''
+        - <lgray>Reward players for opening</lgray>
+        - <lgray>certain amount of crates</lgray>
+        - <lgray>in a row!</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>navigate</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>toggle repeatable</lyellow>.</lgray>
+    Reward:
+      Object:
+        Name: '<lyellow><b>%reward_name%<reset><lgray> (ID: <lorange>%reward_id%</lorange>)</lgray></b></lyellow>'
+        Lore:
+        - '%inspection_problems%'
+        - '%inspection_reward_content%'
+        - ''
+        - '<lyellow>● <lgray>Weight: </lgray>%reward_weight%</lyellow>'
+        - '<lyellow>● <lgray>Roll Chance: </lgray>%reward_roll_chance%%</lyellow>'
+        - '<lyellow>● <lgray>Rarity: </lgray>%reward_rarity_name%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>edit</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Left to <lyellow>move forward</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Right to <lyellow>move backward</lyellow>.</lgray>
+      Creation:
+        Button:
+          Name: <lyellow><b>Create Reward</b></lyellow>
+          Lore:
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Info:
+          Name: <lyellow><b>Creation Wizard</b></lyellow>
+          Lore:
+          - ''
+          - '<lgray><lyellow><b>Step #1</b></lyellow></lgray>'
+          - <lgray>Click an item in your inventory</lgray>
+          - <lgray>to select it as a base for new reward.</lgray>
+          - ''
+          - '<lgray><lyellow><b>Step #2</b></lyellow></lgray>'
+          - <lgray>Select and click reward type button</lgray>
+          - <lgray>to create a new reward.</lgray>
+        Item:
+          Name: <lyellow><b>Item Reward</b></lyellow>
+          Lore:
+          - <lgray>Gives item(s) directly to player's</lgray>
+          - <lgray>inventory when rolled out.</lgray>
+          - ''
+          - <lgray><green>✔</green> Custom Items</lgray>
+          - <lgray><green>✔</green> NBT Support</lgray>
+          - <lgray><green>✔</green> Placeholders</lgray>
+          - <lgray><green>✔</green> Up to 27 items</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>create</lyellow>.</lgray>
+        Command:
+          Name: <lyellow><b>Command Reward</b></lyellow>
+          Lore:
+          - <lgray>Runs specified command(s) with</lgray>
+          - <lgray>placeholders when rolled out.</lgray>
+          - ''
+          - <lgray><green>✔</green> Custom Name</lgray>
+          - <lgray><green>✔</green> Custom Lore</lgray>
+          - <lgray><green>✔</green> Placeholders</lgray>
+          - <lgray><green>✔</green> Unlimited Commands</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>create</lyellow>.</lgray>
+      Sort:
+        Info:
+          Name: <lyellow><b>Sort Rewards</b></lyellow>
+          Lore:
+          - <lgray>Automatically sorts rewards in</lgray>
+          - <lgray>certain order.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>navigate</lyellow>.</lgray>
+      Delete:
+        Name: <lyellow><b><lred>Delete Reward</lred></b></lyellow>
+        Lore:
+        - <lgray>Permanently deletes the reward.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>delete</lyellow>.</lgray>
+      Name:
+        Name: <lyellow><b>Display Name</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%reward_name%</lyellow>'
+        - ''
+        - <lgray>Sets reward name.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+      Description:
+        Name: <lyellow><b>Description</b></lyellow>
+        Lore:
+        - '%reward_description%'
+        - ''
+        - <lgray>Sets reward description (lore).</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add line</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      CustomPreview:
+        Name: Custom Icon
+        Description:
+        - Controls whether reward
+        - should have a custom icon.
+        Formatted: true
+        CurrentInfo:
+          Enabled: '%reward_editor_custom_preview%'
+        ClickActions:
+          LEFT: toggle
+      Icon:
+        Name: <lyellow><b>Icon</b></lyellow>
+        Lore:
+        - '%inspection_reward_preview%'
+        - ''
+        - <lgray>Sets reward icon.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>replace</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>get a copy</lyellow>.</lgray>
+      SetPlaceholders:
+        Name: <lyellow><b>Apply Placeholders?</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Enabled: </lgray>%reward_placeholder_apply%</lyellow>'
+        - ''
+        - <lgray>When enabled, allows to use</lgray>
+        - <lgray>the following placeholders in</lgray>
+        - <lgray>reward's items/commands:</lgray>
+        - <lgray><lyellow>✔</lyellow> Crate placeholders <dgray>(see wiki)</dgray></lgray>
+        - <lgray><lyellow>✔</lyellow> Reward placeholders <dgray>(see wiki)</dgray></lgray>
+        - <lgray><lyellow>✔</lyellow> PlaceholderAPI placeholders</lgray>
+        - ''
+        - <lgray><lred><b>(!)</b></lred> This option <lred>might screw up</lred> custom items.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+      Rarity:
+        Name: <lyellow><b>Rarity</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%reward_rarity_name%</lyellow>'
+        - '<lyellow>● <lgray>Roll Chance: </lgray>%reward_rarity_roll_chance%%</lyellow>'
+        - ''
+        - <lgray>Sets rarity for this reward</lgray>
+        - <lgray>affecting reward's roll chance.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+      Weight:
+        Name: <lyellow><b>Weight</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%reward_weight%</lyellow>'
+        - '<lyellow>● <lgray>Roll Chance: </lgray>%reward_roll_chance%%</lyellow>'
+        - ''
+        - <lgray>Sets weight for this reward</lgray>
+        - <lgray>affecting reward's roll chance.</lgray>
+        - ''
+        - <lgray>When disabled <lyellow>(-1)</lyellow>, reward</lgray>
+        - <lgray>won't be rolled.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>disable</lyellow>.</lgray>
+      CommandsContent:
+        Name: <lyellow><b>Commands Content</b></lyellow>
+        Lore:
+        - '%inspection_reward_content%'
+        - '%reward_editor_commands%'
+        - ''
+        - <lgray>Runs listed commands when rolled out.</lgray>
+        - ''
+        - <lgray>Use <lorange>%player_name%</lorange> for player name.</lgray>
+        - <lgray>Use <lorange>player:</lorange> prefix to run as player.</lgray>
+        - <lgray>Enable <lorange>Apply Placeholders</lorange> for more placeholders.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add command</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      ItemsContent:
+        Name: <lyellow><b>Items Content</b></lyellow>
+        Lore:
+        - '%inspection_reward_content%'
+        - '%reward_editor_items%'
+        - ''
+        - <lgray>Gives listed items when rolled out.</lgray>
+        - ''
+        - <lgray>Enable <lorange>Apply Placeholders</lorange> to allow placeholders.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>open</lyellow>.</lgray>
+      Broadcast:
+        Name: <lyellow><b>Roll Broadcast</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Enabled: </lgray>%reward_broadcast%</lyellow>'
+        - ''
+        - <lgray>Broadcasts a message when rolled out.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+      Limit:
+        Global:
+          Name: <lyellow><b>Global Roll Limits</b></lyellow>
+          Lore:
+          - <lgray>Limits amount of rolls <lorange>for all players</lorange>.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Player:
+          Name: <lyellow><b>Player Roll Limits</b></lyellow>
+          Lore:
+          - <lgray>Limits amount of rolls <lorange>per player</lorange>.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>navigate</lyellow>.</lgray>
+        Toggle:
+          Name: <lyellow><b>Enabled</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%limit_enabled%</lyellow>'
+          - ''
+          - <lgray>Controls whether limit is enabled.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>
+        Amount:
+          Name: <lyellow><b>Amount</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%limit_amount%</lyellow>'
+          - ''
+          - <lgray>Sets amount of available rolls.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+          - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>unlimited</lyellow>.</lgray>
+        Cooldown:
+          Name: <lyellow><b>Reset Time</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%limit_cooldown%</lyellow>'
+          - ''
+          - <lgray>Sets cooldown for rolls amount</lgray>
+          - <lgray>to reset to initial value.</lgray>
+          - ''
+          - <lgray>Use <lyellow>-1</lyellow> to never reset.</lgray>
+          - <lgray>Use <lyellow>-2</lyellow> to reset at midnight.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change</lyellow>.</lgray>
+        CooldownStep:
+          Name: <lyellow><b>Reset Time Step</b></lyellow>
+          Lore:
+          - '<lyellow>● <lgray>Current: </lgray>%limit_cooldown_step%</lyellow>'
+          - ''
+          - <lgray>Sets amount of rolls required</lgray>
+          - <lgray>for the reset time to apply.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+        Reset:
+          Name: <lyellow><b>Clear Data</b></lyellow>
+          Lore:
+          - <lgray>Clears both, global and personal,</lgray>
+          - <lgray>limits data for this reward.</lgray>
+          - ''
+          - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>reset</lyellow>.</lgray>
+      IgnoredPermissions:
+        Name: <lyellow><b>Ignored Permissions</b></lyellow>
+        Lore:
+        - '%reward_ignored_for_permissions%'
+        - ''
+        - <lgray>Reward can be rolled out only if player</lgray>
+        - <lgray><lred>do not</lred> have <lred>all</lred> listed permissions.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add permission</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+      RequiredPermissions:
+        Name: <lyellow><b>Required Permissions</b></lyellow>
+        Lore:
+        - '%reward_required_permissions%'
+        - ''
+        - <lgray>Reward can be rolled out only if player</lgray>
+        - <lgray><lgreen>has any</lgreen> of listed permissions.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>add permission</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>remove all</lyellow>.</lgray>
+    Milestone:
+      Create:
+        Name: <lyellow><b>New Milestone</b></lyellow>
+        Lore: []
+      Object:
+        Name: '<lyellow><b>Milestone: %milestone_openings%</b></lyellow>'
+        Lore:
+        - '%milestone_inspect_reward%'
+        - ''
+        - '<lyellow>● <lgray>Openings: </lgray>%milestone_openings%</lyellow>'
+        - '<lyellow>● <lgray>Reward Id: </lgray>%milestone_reward_id%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>change openings</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>change reward</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Shift-Right to <lyellow>delete <lred>(no undo)</lred></lyellow>.</lgray>
+    Key:
+      Object:
+        Name: '<lyellow><b>%key_name%<reset><lgray> (ID: <white>%key_id%</white>)</lgray></b></lyellow>'
+        Lore:
+        - '%inspection_problems%'
+        - ''
+        - '<lyellow>● <lgray>Virtual: </lgray>%key_virtual%</lyellow>'
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>edit</lyellow>.</lgray>
+      Create:
+        Name: <lyellow><b>New Key</b></lyellow>
+        Lore: []
+      Delete:
+        Name: <lyellow><b><lred>Delete Key</lred></b></lyellow>
+        Lore:
+        - <lgray>Permanently deletes the key.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>delete</lyellow>.</lgray>
+      DisplayName:
+        Name: <lyellow><b>Display Name</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Current: </lgray>%key_name%</lyellow>'
+        - ''
+        - <lgray>Key name for messages, placeholders</lgray>
+        - <lgray>and holograms.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>change</lyellow>.</lgray>
+      Item:
+        Name: <lyellow><b>Inventory Item</b></lyellow>
+        Lore:
+        - '%inspection_key_item%'
+        - ''
+        - <lgray>Sets item for this key.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Drag & Drop to <lyellow>replace</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Left-Click to <lyellow>get key item</lyellow>.</lgray>
+        - <lyellow>[▶]</lyellow> <lgray>Right-Click to <lyellow>get raw copy</lyellow>.</lgray>
+      Virtual:
+        Name: <lyellow><b>Virtual</b></lyellow>
+        Lore:
+        - '<lyellow>● <lgray>Enabled: </lgray>%key_virtual%</lyellow>'
+        - ''
+        - <lgray>Sets whether or not the key is virtual.</lgray>
+        - ''
+        - <lyellow>[▶]</lyellow> <lgray>Click to <lyellow>toggle</lyellow>.</lgray>

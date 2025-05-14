@@ -947,7 +947,7 @@ chat:
   # {TEAMPREFIX} - The sender's scoreboard team prefix.
   # {TEAMSUFFIX} - The sender's scoreboard team suffix.
 
-  format: '{PREFIX}{DISPLAYNAME}&7: {MESSAGE}'
+  format: '{DISPLAYNAME}&7: {MESSAGE}'
   #format: '{PREFIX}{DISPLAYNAME}&7: {MESSAGE}'
   #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
 
@@ -959,8 +959,9 @@ chat:
 
   # You can specify a format for each group.
   group-formats:
-  #  default: '{WORLDNAME} {DISPLAYNAME}&7:&r {MESSAGE}'
-  #  admins: '{WORLDNAME} &c[{GROUP}]&r {DISPLAYNAME}&7:&c {MESSAGE}'
+    owner: '&f{USERNAME}&7: {MESSAGE}'
+    admin: '&f{USERNAME}&7: {MESSAGE}'
+    member: '&f{USERNAME}&7: {MESSAGE}'
 
   # You can also specify a format for each type of chat for each group.
   #  admins:

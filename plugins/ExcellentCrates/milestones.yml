@@ -1,0 +1,114 @@
+# ==================== [SECTION] SETTINGS ====================
+# > [MenuType] : String | Represents the menu type. Allowed values: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | Sets menu title.
+# > [Auto_Refresh] : Integer | Defines menu refresh rate in seconds. Set 0 to disable.
+# > [PlaceholderAPI -> Enabled] : Boolean | When enabled, applies PlaceholderAPI placeholders for all items in the menu per player.
+#  
+# ==================== [SECTION] CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# > [Item] : Section | Item to display.
+#     [*] Navigate to https://nightexpressdev.com/nightcore/configuration/item-formation/ for a list of available options.
+# > [Priority] : Integer | Item priority. Higher values will override other item(s) in the same slot(s).
+# > [Slots] : Int Array | Item slots, starts from 0. Split with commas.
+#     Slots: '0,4,9,10'
+# > [Type] : String | Defines item click action.
+#     [*] Available types: ['close', 'page_next', 'page_previous', 'return']
+# > [Click_Commands] : Section | Executes commands on click with PlaceholderAPI support.
+#     [*] Works only if [Type] is not set (null).
+#     [*] Available click types: [LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: generic_9x3
+  Title: <black>Crate Milestones</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+Milestones:
+  Completed:
+    Name: <lgreen><b>%milestone_openings% Openings</b></lgreen> <gray>(<white>Completed</white>)</gray>
+    Lore:
+    - <lgreen><b>Info:</b></lgreen>
+    - '<lgreen>▪ <lgray>Reward: </lgray>%reward_name%</lgreen>'
+    - ''
+    - <lgreen>✔</lgreen> <lgray>You have completed this milestone.</lgray>
+    Custom_Item:
+      Enabled: true
+      Value:
+        Material: player_head
+        Lore: []
+        SkinURL: a79a5c95ee17abfef45c8dc224189964944d560f19a44f19f8a46aef3fee4756
+  Incompleted:
+    Name: <lyellow><b>%milestone_openings% Openings</b></lyellow> <gray>(<white>Incompleted</white>)</gray>
+    Lore:
+    - <lyellow><b>Info:</b></lyellow>
+    - '<lyellow>▪ <lgray>Openings Left: </lgray>%openings_left%</lyellow>'
+    - '<lyellow>▪ <lgray>Reward: </lgray>%reward_name%</lyellow>'
+    - ''
+    - <lred>✘</lred> <lgray>You haven''t completed this milestone yet.</lgray>
+    Custom_Item:
+      Enabled: false
+  Slots: 10,12,14,16
+  Pointer:
+    Enabled: true
+    Per_Milestone: 2
+    Slots: 1,19,3,21,5,23,7,25
+    Completed:
+      Material: lime_stained_glass_pane
+      Lore: []
+    Incompleted:
+      Material: white_stained_glass_pane
+      Lore: []
+Content:
+  return:
+    Priority: 100
+    Item:
+      Material: player_head
+      Display_Name: <lyellow><b><lgray><b>Return</b></lgray></b></lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+      SkinURL: be9ae7a4be65fcbaee65181389a2f7d47e2e326db59ea3eb789a92c85ea46
+    Slots: '22'
+    Type: return
+  page_next:
+    Priority: 100
+    Item:
+      Material: player_head
+      Display_Name: <lyellow><b><lgray><!b>Next Page →</!b></lgray></b></lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+      SkinURL: f32ca66056b72863e98f7f32bd7d94c7a0d796af691c9ac3a9136331352288f9
+    Slots: '17'
+    Type: page_next
+  page_previous:
+    Priority: 100
+    Item:
+      Material: player_head
+      Display_Name: <lyellow><b><lgray><!b>← Previous Page</!b></lgray></b></lyellow>
+      Lore:
+      - '%empty-if-above%'
+      - '%empty-if-below%'
+      SkinURL: 86971dd881dbaf4fd6bcaa93614493c612f869641ed59d1c9363a3666a5fa6
+    Slots: '9'
+    Type: page_previous
+  black_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: black_stained_glass_pane
+      Lore: []
+    Slots: 0,1,2,3,4,5,6,7,8,18,19,20,21,22,23,24,25,26
+    Type: 'null'
+  gray_stained_glass_pane:
+    Priority: 0
+    Item:
+      Material: gray_stained_glass_pane
+      Lore: []
+    Slots: 9,10,11,12,13,14,15,16,17
+    Type: 'null'

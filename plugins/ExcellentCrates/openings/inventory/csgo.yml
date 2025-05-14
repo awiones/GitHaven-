@@ -1,0 +1,114 @@
+Settings:
+  Menu_Type: generic_9x3
+  Title: <black>Opening %crate_name%...</black>
+  Mode: NORMAL
+  WinSlots: '13'
+  # Sets max. amount of the opening ticks while players can skip the opening animation.
+  # Set to -1 to disable (no skip).
+  Max_Ticks_To_Skip: 40
+  # Sets how soon (in ticks) animation GUI will be closed when completed.
+  # [1 second = 20 ticks]
+  # [Default is 20 ticks]
+  Completion_Pause_Ticks: 40
+  RunOnLaunch:
+    REWARD:
+      main:
+        SpinnerId: default
+        Mode: SEQUENTAL
+        Slots: 17,16,15,14,13,12,11,10,9
+        SpinTimes: '51:1:0:5:1'
+        Sound: block.note_block.xylophone
+    ANIMATION:
+      background:
+        SpinnerId: rainbow
+        Mode: INDEPENDENT
+        Slots: 0,1,2,3,5,6,7,8,18,19,20,21,23,24,25,26
+        SpinTimes: '71:1:0:10:1'
+Content:
+  Default:
+    arrow_up:
+      Item:
+        Material: player_head
+        Display_Name: <cyan><b>↑ Your Reward ↑</b></cyan>
+        Lore: []
+        SkinURL: 77334cddfab45d75ad28e1a47bf8cf5017d2f0982f6737da22d4972952510661
+      Slots: '22'
+    arrow_down:
+      Item:
+        Material: player_head
+        Display_Name: <cyan><b>↓ Your Reward ↓</b></cyan>
+        Lore: []
+        SkinURL: e7742034f59db890c8004156b727c77ca695c4399d8e0da5ce9227cf836bb8e2
+      Slots: '4'
+Spinners:
+  REWARD:
+    default:
+      Rarities:
+      - '*'
+  ANIMATION:
+    rainbow:
+      Items:
+        s3:
+          Chance: 1.0
+          Material: gray_stained_glass_pane
+          Lore: []
+        s4:
+          Chance: 1.0
+          Material: black_stained_glass_pane
+          Lore: []
+        s5:
+          Chance: 1.0
+          Material: brown_stained_glass_pane
+          Lore: []
+        s6:
+          Chance: 1.0
+          Material: red_stained_glass_pane
+          Lore: []
+        s7:
+          Chance: 1.0
+          Material: orange_stained_glass_pane
+          Lore: []
+        s8:
+          Chance: 1.0
+          Material: yellow_stained_glass_pane
+          Lore: []
+        s9:
+          Chance: 1.0
+          Material: lime_stained_glass_pane
+          Lore: []
+        s11:
+          Chance: 1.0
+          Material: cyan_stained_glass_pane
+          Lore: []
+        s10:
+          Chance: 1.0
+          Material: green_stained_glass_pane
+          Lore: []
+        s13:
+          Chance: 1.0
+          Material: blue_stained_glass_pane
+          Lore: []
+        s12:
+          Chance: 1.0
+          Material: light_blue_stained_glass_pane
+          Lore: []
+        s15:
+          Chance: 1.0
+          Material: magenta_stained_glass_pane
+          Lore: []
+        s14:
+          Chance: 1.0
+          Material: purple_stained_glass_pane
+          Lore: []
+        s16:
+          Chance: 1.0
+          Material: pink_stained_glass_pane
+          Lore: []
+        s1:
+          Chance: 1.0
+          Material: white_stained_glass_pane
+          Lore: []
+        s2:
+          Chance: 1.0
+          Material: light_gray_stained_glass_pane
+          Lore: []

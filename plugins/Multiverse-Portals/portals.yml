@@ -1,1 +1,21 @@
-portals: {}
+portals:
+  skyblock:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: Milhae77
+    location: 33.0,-20.0,26.0:33.0,-15.0,30.0
+    world: lobby-githaven
+    destination: skyblock-lobby
+  smp:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: Milhae77
+    location: 4.0,-18.0,42.0:7.0,-14.0,42.0
+    world: lobby-githaven
+    destination: smp-lobby
