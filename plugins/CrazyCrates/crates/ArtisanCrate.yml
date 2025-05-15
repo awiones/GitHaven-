@@ -1,0 +1,243 @@
+Crate:
+  CrateType: Cosmic
+  StartingKeys: 0
+  RequiredKeys: 0
+  Max-Mass-Open: 10
+  InGUI: true
+  Slot: 29
+  OpeningBroadCast: true
+  BroadCast: "%prefix%<bold><gold>%player%</bold><reset> <gray>is opening a <bold><gradient:#b7a97e:#b8c2a7>Artisan Crate.</gradient></bold>"
+  opening-command:
+    toggle: false
+    commands:
+      - "put your command here."
+  sound:
+    cycle-sound:
+      toggle: true
+      value: "block.note_block.xylophone"
+      volume: 1.0
+      pitch: 1.0
+    click-sound:
+      toggle: true
+      value: "ui.button.click"
+      volume: 1.0
+      pitch: 1.0
+    stop-sound:
+      toggle: true
+      value: "entity.player.levelup"
+      volume: 1.0
+      pitch: 1.0
+  Prize-Message:
+    - "<gray>You have won <red>%reward% <gray>from <red>%crate%."
+  Prize-Commands: []
+  Settings:
+    Broadcast:
+      Toggle: false
+      Messages:
+        - "<red>%player% won the prize <yellow>%reward%."
+      Permission: ""
+  Item: "stone_axe"
+  Custom-Model-Data: -1
+  Glowing: false
+  Name: "<bold><gray>Artisan Crate</bold>"
+  Lore:
+    - "<gray>This crate contains artisan tools and materials."
+    - "<gray>You have <gold>%keys% keys <gray>to open this crate with."
+    - "<gray>You have opened this crate: <gold>%crate_opened% times"
+    - "<gray>(<yellow>!<gray>) Right click to view rewards."
+  Preview:
+    Name: "<gradient:#b7a97e:#b8c2a7>Artisan Crate Preview</gradient>"
+    Toggle: true
+    ChestLines: 5
+    Glass:
+      Toggle: true
+      Name: " "
+      Item: "gray_stained_glass_pane"
+      Custom-Model-Data: -1
+  tier-preview:
+    toggle: true
+    rows: 5
+    glass:
+      toggle: true
+      name: " "
+      custom-model-data: -1
+      item: "brown_stained_glass_pane"
+  random:
+    toggle: false
+    types:
+      row-1: Common
+      row-2: Uncommon
+      row-3: Rare
+      row-4: UltraRare
+  Tiers:
+    Common:
+      Name: "<gray>Common Tier"
+      Lore:
+        - "<gray>A common artisan reward."
+        - "<red>%chance%%</red>"
+      Item: "chest"
+      Custom-Model-Data: -1
+      Weight: 40.0
+      Slot: 20
+    Uncommon:
+      Name: "<green>Uncommon Tier"
+      Lore:
+        - "<green>An uncommon artisan reward."
+        - "<red>%chance%%</red>"
+      Item: "chest"
+      Custom-Model-Data: -1
+      Weight: 30.0
+      Slot: 22
+    Rare:
+      Name: "<blue>Rare Tier"
+      Lore:
+        - "<blue>A rare artisan reward."
+        - "<red>%chance%%</red>"
+      Item: "ender_chest"
+      Custom-Model-Data: -1
+      Weight: 20.0
+      Slot: 24
+    UltraRare:
+      Name: "<gold>Ultra Rare Tier"
+      Lore:
+        - "<gold>An ultra rare artisan reward."
+        - "<red>%chance%%</red>"
+      Item: "ender_chest"
+      Custom-Model-Data: -1
+      Weight: 10.0
+      Slot: 26
+  PhysicalKey:
+    Name: "<bold><gray>Artisan Crate Key</bold>"
+    Custom-Model-Data: -1
+    Lore:
+      - "<gray>A key for artisan rewards."
+    Item: "tripwire_hook"
+    Glowing: true
+  Hologram:
+    Toggle: true
+    Height: 1.5
+    Range: 8
+    Update-Interval: -1
+    Color: "transparent"
+    Message:
+      - "&b&lArtisan &d&lCrate"
+  Crate-Type-Settings:
+    Total-Prize-Amount: 4
+    Mystery-Crate:
+      Item: "chest"
+      Custom-Model-Data: -1
+      Name: "<bold><white>???</bold>"
+      Lore:
+        - "<gray>You may choose 4 crates."
+    Picked-Crate:
+      Item: "glass_pane"
+      Custom-Model-Data: -1
+      Name: "<bold><white>???</bold>"
+      Lore:
+        - "<gray>You have chosen #%slot%."
+  Prizes:
+    "1":
+      DisplayName: "<gray>Glass x32"
+      DisplayItem: "glass"
+      DisplayAmount: 32
+      Weight: 13.34
+      Tiers:
+        - "Common"
+      Items:
+        - "Item:glass, Amount:32, Name:<gray>Glass x32"
+    "2":
+      DisplayName: "<gray>Redstone x16"
+      DisplayItem: "redstone"
+      DisplayAmount: 16
+      Weight: 13.33
+      Tiers:
+        - "Common"
+      Items:
+        - "Item:redstone, Amount:16, Name:<gray>Redstone x16"
+    "3":
+      DisplayName: "<gray>Ladder x32"
+      DisplayItem: "ladder"
+      DisplayAmount: 32
+      Weight: 13.33
+      Tiers:
+        - "Common"
+      Items:
+        - "Item:ladder, Amount:32, Name:<gray>Ladder x32"
+    "4":
+      DisplayName: "<green>Enchanted Iron Shovel (Efficiency I)"
+      DisplayItem: "iron_shovel"
+      DisplayAmount: 1
+      Weight: 15.0
+      Tiers:
+        - "Uncommon"
+      DisplayEnchantments:
+        - "efficiency:1"
+      Items:
+        - "Item:iron_shovel, enchantment:efficiency:1, Name:<green>Enchanted Iron Shovel (Efficiency I)"
+    "5":
+      DisplayName: "<green>Enchanted Iron Pickaxe (Efficiency I)"
+      DisplayItem: "iron_pickaxe"
+      DisplayAmount: 1
+      Weight: 7.5
+      Tiers:
+        - "Uncommon"
+      DisplayEnchantments:
+        - "efficiency:1"
+      Items:
+        - "Item:iron_pickaxe, enchantment:efficiency:1, Name:<green>Enchanted Iron Pickaxe (Efficiency I)"
+    "6":
+      DisplayName: "<green>Glowstone x16"
+      DisplayItem: "glowstone"
+      DisplayAmount: 16
+      Weight: 7.5
+      Tiers:
+        - "Uncommon"
+      Items:
+        - "Item:glowstone, Amount:16, Name:<green>Glowstone x16"
+    "7":
+      DisplayName: "<blue>Hopper x3"
+      DisplayItem: "hopper"
+      DisplayAmount: 3
+      Weight: 6.67
+      Tiers:
+        - "Rare"
+      Items:
+        - "Item:hopper, Amount:3, Name:<blue>Hopper x3"
+    "8":
+      DisplayName: "<blue>Chest Minecart"
+      DisplayItem: "chest_minecart"
+      DisplayAmount: 1
+      Weight: 6.66
+      Tiers:
+        - "Rare"
+      Items:
+        - "Item:chest_minecart, Name:<blue>Chest Minecart"
+    "9":
+      DisplayName: "<blue>Observer"
+      DisplayItem: "observer"
+      DisplayAmount: 1
+      Weight: 6.67
+      Tiers:
+        - "Rare"
+      Items:
+        - "Item:observer, Name:<blue>Observer"
+    "10":
+      DisplayName: "<gold>Portable Crafting Table"
+      DisplayItem: "crafting_table"
+      DisplayAmount: 1
+      Weight: 5.0
+      Tiers:
+        - "UltraRare"
+      DisplayLore:
+        - "<gray>A portable crafting table. Right-click to use!"
+      Items:
+        - "Item:crafting_table, Name:<gold>Portable Crafting Table, Lore:<gray>A portable crafting table. Right-click to use!"
+    "11":
+      DisplayName: "<gold>Piston x8"
+      DisplayItem: "piston"
+      DisplayAmount: 8
+      Weight: 5.0
+      Tiers:
+        - "UltraRare"
+      Items:
+        - "Item:piston, Amount:8, Name:<gold>Piston x8"

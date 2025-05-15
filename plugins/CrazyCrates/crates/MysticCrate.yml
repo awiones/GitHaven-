@@ -1,0 +1,196 @@
+Crate:
+  CrateType: Wonder
+  StartingKeys: 0
+  RequiredKeys: 0
+  Max-Mass-Open: 10
+  InGUI: true
+  Slot: 31
+  OpeningBroadCast: true
+  BroadCast: "%prefix%<bold><gold>%player%</bold><reset> <gray>is opening a <bold><gradient:#7e3ff2:#e0b3ff>Mystic Crate.</gradient></bold>"
+  opening-command:
+    toggle: false
+    commands:
+      - "put your command here."
+  sound:
+    cycle-sound:
+      toggle: true
+      value: "block.note_block.xylophone"
+      volume: 1.0
+      pitch: 1.0
+    click-sound:
+      toggle: true
+      value: "ui.button.click"
+      volume: 1.0
+      pitch: 1.0
+    stop-sound:
+      toggle: true
+      value: "entity.player.levelup"
+      volume: 1.0
+      pitch: 1.0
+  Prize-Message:
+    - "<gray>You have won <red>%reward% <gray>from <red>%crate%."
+  Prize-Commands: []
+  Settings:
+    Broadcast:
+      Toggle: false
+      Messages:
+        - "<red>%player% won the prize <yellow>%reward%."
+      Permission: ""
+    Rewards:
+      Re-Roll-Spin: false
+      Permission:
+        Toggle: false
+        Max-Cap: 20
+  Item: "amethyst_shard"
+  Custom-Model-Data: -1
+  Glowing: true
+  Name: "<bold><gradient:#7e3ff2:#e0b3ff>Mystic Crate</gradient></bold>"
+  Lore:
+    - "<gray>This crate contains mysterious magical items."
+    - "<gray>You have <gold>%keys% keys <gray>to open this crate with."
+    - "<gray>You have opened this crate: <gold>%crate_opened% times"
+    - "<gray>(<yellow>!<gray>) Right click to view rewards."
+  Preview:
+    Name: "<gradient:#7e3ff2:#e0b3ff>Mystic Crate Preview</gradient>"
+    Toggle: true
+    ChestLines: 6
+    Glass:
+      Toggle: true
+      Name: " "
+      Item: "purple_stained_glass_pane"
+      Custom-Model-Data: -1
+  PhysicalKey:
+    Name: "<bold><gradient:#7e3ff2:#e0b3ff>Mystic Crate Key</gradient></bold>"
+    Lore:
+      - "<gradient:#7e3ff2:#e0b3ff>A magical key to open a mystic crate!</gradient>"
+    Item: "tripwire_hook"
+    Custom-Model-Data: -1
+    Glowing: true
+  Hologram:
+    Toggle: true
+    Height: 1.5
+    Range: 8
+    Update-Interval: -1
+    Color: "transparent"
+    Message:
+      - "&d&lMystic &b&lCrate"
+  Prizes:
+    "1":
+      DisplayName: "<aqua>XP Bottle x32"
+      DisplayItem: "experience_bottle"
+      DisplayAmount: 32
+      Weight: 20.0
+      Items:
+        - "Item:experience_bottle, Amount:32, Name:<aqua>XP Bottle x32"
+    "2":
+      DisplayName: "<blue>Lapis x32"
+      DisplayItem: "lapis_lazuli"
+      DisplayAmount: 32
+      Weight: 20.0
+      Items:
+        - "Item:lapis_lazuli, Amount:32, Name:<blue>Lapis x32"
+    "3":
+      DisplayName: "<green>Enchanted Book (Protection IV)"
+      DisplayItem: "enchanted_book"
+      DisplayAmount: 1
+      Weight: 10.0
+      Items:
+        - "Item:enchanted_book, enchantment:protection:4, Name:<green>Enchanted Book (Protection IV)"
+    "4":
+      DisplayName: "<green>Enchanted Book (Fortune III)"
+      DisplayItem: "enchanted_book"
+      DisplayAmount: 1
+      Weight: 10.0
+      Items:
+        - "Item:enchanted_book, enchantment:fortune:3, Name:<green>Enchanted Book (Fortune III)"
+    "5":
+      DisplayName: "<yellow>Name Tag"
+      DisplayItem: "name_tag"
+      DisplayAmount: 1
+      Weight: 10.0
+      Items:
+        - "Item:name_tag, Name:<yellow>Name Tag"
+    "6":
+      DisplayName: "<light_purple>Enchanted Book (Custom: Telekinesis)"
+      DisplayItem: "enchanted_book"
+      DisplayAmount: 1
+      Weight: 10.0
+      Items:
+        - "Item:enchanted_book, Name:<light_purple>Enchanted Book (Telekinesis), Lore:<gray>A mysterious custom enchantment."
+    "7":
+      DisplayName: "<light_purple>Enchanted Book (Custom: Haste)"
+      DisplayItem: "enchanted_book"
+      DisplayAmount: 1
+      Weight: 10.0
+      Items:
+        - "Item:enchanted_book, Name:<light_purple>Enchanted Book (Haste), Lore:<gray>A mysterious custom enchantment."
+    "8":
+      DisplayName: "<light_purple>Ender Pearl x8"
+      DisplayItem: "ender_pearl"
+      DisplayAmount: 8
+      Weight: 10.0
+      Items:
+        - "Item:ender_pearl, Amount:8, Name:<light_purple>Ender Pearl x8"
+    "9":
+      DisplayName: "<gold>Mystic Helmet"
+      DisplayItem: "diamond_helmet"
+      DisplayAmount: 1
+      Weight: 2.5
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:3"
+        - "respiration:3"
+      DisplayTrim:
+        Material: "amethyst"
+        Pattern: "sentry"
+      DisplayLore:
+        - "<light_purple>A helmet blessed by the ancients."
+      Items:
+        - "Item:diamond_helmet, Name:<gold>Mystic Helmet, protection:5, unbreaking:3, respiration:3, Trim-Pattern:sentry, Trim-Material:amethyst, Lore:<light_purple>A helmet blessed by the ancients."
+    "10":
+      DisplayName: "<gold>Mystic Chestplate"
+      DisplayItem: "diamond_chestplate"
+      DisplayAmount: 1
+      Weight: 2.5
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:3"
+        - "thorns:3"
+      DisplayTrim:
+        Material: "amethyst"
+        Pattern: "coast"
+      DisplayLore:
+        - "<light_purple>A chestplate blessed by the ancients."
+      Items:
+        - "Item:diamond_chestplate, Name:<gold>Mystic Chestplate, protection:5, unbreaking:3, thorns:3, Trim-Pattern:coast, Trim-Material:amethyst, Lore:<light_purple>A chestplate blessed by the ancients."
+    "11":
+      DisplayName: "<gold>Mystic Leggings"
+      DisplayItem: "diamond_leggings"
+      DisplayAmount: 1
+      Weight: 2.5
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:3"
+      DisplayTrim:
+        Material: "amethyst"
+        Pattern: "dune"
+      DisplayLore:
+        - "<light_purple>Leggings blessed by the ancients."
+      Items:
+        - "Item:diamond_leggings, Name:<gold>Mystic Leggings, protection:5, unbreaking:3, Trim-Pattern:dune, Trim-Material:amethyst, Lore:<light_purple>Leggings blessed by the ancients."
+    "12":
+      DisplayName: "<gold>Mystic Boots"
+      DisplayItem: "diamond_boots"
+      DisplayAmount: 1
+      Weight: 2.5
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:3"
+        - "depth_strider:3"
+      DisplayTrim:
+        Material: "amethyst"
+        Pattern: "eye"
+      DisplayLore:
+        - "<light_purple>Boots blessed by the ancients."
+      Items:
+        - "Item:diamond_boots, Name:<gold>Mystic Boots, protection:5, unbreaking:3, depth_strider:3, Trim-Pattern:eye, Trim-Material:amethyst, Lore:<light_purple>Boots blessed by the ancients."

@@ -1,12 +1,18 @@
 Players:
   2e3183ef-c877-49ba-aef1-c3e6ea4a4ec3:
     tracking:
-      total-crates: 24
+      total-crates: 41
       CrateExample: 6
-      WonderCrate: 1
-      BasicCrate: 8
+      WonderCrate: 3
+      BasicCrate: 13
       AdvancedExample: 1
       AnimalCrate: 8
+      CasinoCrate: 1
+      CosmicCrate: 2
+      QuadCrate: 1
+      ArtisanCrate: 1
+      TycoonCrate: 3
+      DivineCrate: 2
   99a7ea62-ec71-4ced-aaa8-f59dad4bfd95:
     tracking:
       total-crates: 1

@@ -11,3 +11,27 @@ Locations:
     X: 215
     Y: 141
     Z: 1430
+  '3':
+    Crate: ArtisanCrate
+    World: skyblock-lobby
+    X: 215
+    Y: 141
+    Z: 1428
+  '4':
+    Crate: TycoonCrate
+    World: skyblock-lobby
+    X: 222
+    Y: 141
+    Z: 1428
+  '6':
+    Crate: DivineCrate
+    World: skyblock-lobby
+    X: 222
+    Y: 141
+    Z: 1432
+  '5':
+    Crate: MysticCrate
+    World: skyblock-lobby
+    X: 222
+    Y: 141
+    Z: 1430

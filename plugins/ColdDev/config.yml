@@ -1,0 +1,3 @@
+# Should all plugins running ColdDev check for updates?
+# ColdDev is a core library created by Cold Development
+check-updates: true

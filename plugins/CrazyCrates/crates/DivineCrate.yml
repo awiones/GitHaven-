@@ -1,0 +1,139 @@
+Crate:
+  CrateType: CSGO
+  StartingKeys: 0
+  RequiredKeys: 0
+  Max-Mass-Open: 10
+  InGUI: true
+  Slot: 33
+  OpeningBroadCast: true
+  BroadCast: "%prefix%<bold><gold>%player%</bold><reset> <gray>is opening a <bold><white>Divine Crate</bold>!"
+  opening-command:
+    toggle: false
+    commands:
+      - "put your command here."
+  sound:
+    cycle-sound:
+      toggle: true
+      value: "block.note_block.xylophone"
+      volume: 1.0
+      pitch: 1.0
+    click-sound:
+      toggle: true
+      value: "ui.button.click"
+      volume: 1.0
+      pitch: 1.0
+    stop-sound:
+      toggle: true
+      value: "entity.player.levelup"
+      volume: 1.0
+      pitch: 1.0
+  Prize-Message:
+    - "<gray>You have won <red>%reward% <gray>from <red>%crate%."
+  Prize-Commands: []
+  Settings:
+    Broadcast:
+      Toggle: false
+      Messages:
+        - "<red>%player% won the prize <yellow>%reward%."
+      Permission: ""
+    Rewards:
+      Re-Roll-Spin: false
+      Permission:
+        Toggle: false
+  Item: "nether_star"
+  Custom-Model-Data: -1
+  Glowing: true
+  Name: "<bold><white>Divine Crate</bold>"
+  Lore:
+    - "<gray>This crate contains legendary divine treasures."
+    - "<gray>You have <gold>%keys% keys <gray>to open this crate with."
+    - "<gray>You have opened this crate: <gold>%crate_opened% times"
+    - "<gray>(<yellow>!<gray>) Right click to view rewards."
+  Preview:
+    Name: "<white>Divine Crate Preview"
+    Toggle: true
+    ChestLines: 6
+    Glass:
+      Toggle: true
+      Name: " "
+      Item: "white_stained_glass_pane"
+      Custom-Model-Data: -1
+  PhysicalKey:
+    Name: "<bold><white>Divine Crate Key</bold>"
+    Lore:
+      - "<gray>A key for divine rewards."
+    Item: "tripwire_hook"
+    Custom-Model-Data: -1
+    Glowing: true
+  Hologram:
+    Toggle: true
+    Height: 1.5
+    Range: 8
+    Update-Interval: -1
+    Color: "transparent"
+    Message:
+      - "&f&lDivine Crate"
+  Prizes:
+    "1":
+      DisplayName: "<white>Divine Armor Set"
+      DisplayItem: "netherite_chestplate"
+      DisplayAmount: 1
+      Weight: 25.0
+      DisplayEnchantments:
+        - "protection:5"
+        - "unbreaking:5"
+        - "mending:1"
+      DisplayTrim:
+        Material: "quartz"
+        Pattern: "silence"
+      DisplayLore:
+        - "<gray>Full Netherite Armor with divine white trim."
+        - "<aqua>Includes glowing particle trail!"
+      Items:
+        - "Item:netherite_helmet, protection:5, unbreaking:5, mending:1, Trim-Pattern:silence, Trim-Material:quartz, Name:<white>Divine Helmet, Lore:<gray>Part of the Divine Set."
+        - "Item:netherite_chestplate, protection:5, unbreaking:5, mending:1, Trim-Pattern:silence, Trim-Material:quartz, Name:<white>Divine Chestplate, Lore:<gray>Part of the Divine Set."
+        - "Item:netherite_leggings, protection:5, unbreaking:5, mending:1, Trim-Pattern:silence, Trim-Material:quartz, Name:<white>Divine Leggings, Lore:<gray>Part of the Divine Set."
+        - "Item:netherite_boots, protection:5, unbreaking:5, mending:1, Trim-Pattern:silence, Trim-Material:quartz, Name:<white>Divine Boots, Lore:<gray>Part of the Divine Set."
+    "2":
+      DisplayName: "<white>Divine Tool Set"
+      DisplayItem: "netherite_pickaxe"
+      DisplayAmount: 1
+      Weight: 25.0
+      DisplayEnchantments:
+        - "efficiency:6"
+        - "fortune:5"
+        - "mending:1"
+      DisplayLore:
+        - "<gray>Pickaxe, Axe, Shovel with divine power."
+        - "<aqua>Includes glowing particle trail!"
+      Items:
+        - "Item:netherite_pickaxe, efficiency:6, fortune:5, mending:1, Name:<white>Divine Pickaxe, Lore:<gray>Part of the Divine Set."
+        - "Item:netherite_axe, efficiency:6, fortune:5, mending:1, Name:<white>Divine Axe, Lore:<gray>Part of the Divine Set."
+        - "Item:netherite_shovel, efficiency:6, fortune:5, mending:1, Name:<white>Divine Shovel, Lore:<gray>Part of the Divine Set."
+    "3":
+      DisplayName: "<white>Divine Weapon Set"
+      DisplayItem: "netherite_sword"
+      DisplayAmount: 1
+      Weight: 25.0
+      DisplayEnchantments:
+        - "sharpness:6"
+        - "looting:4"
+      DisplayLore:
+        - "<gray>Sword and Bow with legendary power."
+        - "<aqua>Includes glowing particle trail!"
+      Items:
+        - "Item:netherite_sword, sharpness:6, looting:4, Name:<white>Divine Sword, Lore:<gray>Part of the Divine Set."
+        - "Item:bow, power:6, flame:1, Name:<white>Divine Bow, Lore:<gray>Part of the Divine Set."
+    "4":
+      DisplayName: "<white>Divine Utility Set"
+      DisplayItem: "elytra"
+      DisplayAmount: 1
+      Weight: 25.0
+      DisplayLore:
+        - "<gray>Elytra (custom texture), Beacon, Spawner x3, Totem x3."
+        - "<aqua>Includes glowing particle trail!"
+      Items:
+        - "Item:elytra, Custom-Model-Data:1001, Name:<white>Divine Elytra, Lore:<gray>Part of the Divine Set."
+        - "Item:beacon, Name:<white>Divine Beacon, Lore:<gray>Part of the Divine Set."
+        - "Item:spawner, Amount:3, Name:<white>Divine Spawner, Lore:<gray>Part of the Divine Set."
+        - "Item:totem_of_undying, Amount:3, Name:<white>Divine Totem, Lore:<gray>Part of the Divine Set."

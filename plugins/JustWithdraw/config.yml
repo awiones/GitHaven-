@@ -1,0 +1,22 @@
+message-prefix: "§6[JustWithdraw] §r"
+
+# Minimum amount that can be withdrawn
+min-withdraw-amount: 1.0
+
+# Configuration for displaying notes when dropped
+show-note:
+  # Whether to show the note's value above it when dropped
+  enabled: true
+  # The format of the displayed name (%amount% will be replaced with the actual amount)
+  name-format: "§e§l💰 %amount% 💰"
+  # Whether the dropped note should glow
+  glowing: true
+  # Pickup delay in ticks (20 ticks = 1 second)
+  pickup-delay: 10
+  # Whether dropped notes should float in the air (false = normal drop behavior)
+  floating: false
+
+# Message to show after a player deposits money
+show-message:
+  enabled: false
+  thank-you-message: "§aThanks for using JustWithdraw banking services!"

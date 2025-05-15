@@ -1,0 +1,129 @@
+Crate:
+  CrateType: CSGO
+  StartingKeys: 0
+  RequiredKeys: 0
+  Max-Mass-Open: 10
+  InGUI: true
+  Slot: 15
+  OpeningBroadCast: true
+  BroadCast: "%prefix%<bold><gold>%player%</bold><reset> <gray>is opening a <bold><yellow>Tycoon Crate</bold>!"
+  opening-command:
+    toggle: false
+    commands:
+      - "put your command here."
+  sound:
+    cycle-sound:
+      toggle: true
+      value: "block.note_block.xylophone"
+      volume: 1.0
+      pitch: 1.0
+    click-sound:
+      toggle: true
+      value: "ui.button.click"
+      volume: 1.0
+      pitch: 1.0
+    stop-sound:
+      toggle: true
+      value: "entity.player.levelup"
+      volume: 1.0
+      pitch: 1.0
+  Prize-Message:
+    - "<gray>You have won <red>%reward% <gray>from <red>%crate%."
+  Prize-Commands: []
+  Settings:
+    Broadcast:
+      Toggle: false
+      Messages:
+        - "<red>%player% won the prize <yellow>%reward%."
+      Permission: ""
+    Rewards:
+      Re-Roll-Spin: false
+      Permission:
+        Toggle: false
+  Item: "gold_ingot"
+  Custom-Model-Data: -1
+  Glowing: true
+  Name: "<bold><yellow>Tycoon Crate</bold>"
+  Lore:
+    - "<gray>This crate contains riches for tycoons."
+    - "<gray>You have <gold>%keys% keys <gray>to open this crate with."
+    - "<gray>You have opened this crate: <gold>%crate_opened% times"
+    - "<gray>(<yellow>!<gray>) Right click to view rewards."
+  Preview:
+    Name: "<yellow>Tycoon Crate Preview"
+    Toggle: true
+    ChestLines: 6
+    Glass:
+      Toggle: true
+      Name: " "
+      Item: "yellow_stained_glass_pane"
+      Custom-Model-Data: -1
+  PhysicalKey:
+    Name: "<bold><yellow>Tycoon Crate Key</bold>"
+    Lore:
+      - "<gray>A key for tycoon rewards."
+    Item: "tripwire_hook"
+    Custom-Model-Data: -1
+    Glowing: true
+  Hologram:
+    Toggle: true
+    Height: 1.5
+    Range: 8
+    Update-Interval: -1
+    Color: "transparent"
+    Message:
+      - "&e&lTycoon Crate"
+  Prizes:
+    "1":
+      DisplayName: "<yellow>Gold Ingot x16"
+      DisplayItem: "gold_ingot"
+      DisplayAmount: 16
+      Weight: 17.5
+      Items:
+        - "Item:gold_ingot, Amount:16, Name:<yellow>Gold Ingot x16"
+    "2":
+      DisplayName: "<green>Emerald x6"
+      DisplayItem: "emerald"
+      DisplayAmount: 6
+      Weight: 17.5
+      Items:
+        - "Item:emerald, Amount:6, Name:<green>Emerald x6"
+    "3":
+      DisplayName: "<aqua>Diamond x6"
+      DisplayItem: "diamond"
+      DisplayAmount: 6
+      Weight: 15.0
+      Items:
+        - "Item:diamond, Amount:6, Name:<aqua>Diamond x6"
+    "4":
+      DisplayName: "<gray>Iron Block x4"
+      DisplayItem: "iron_block"
+      DisplayAmount: 4
+      Weight: 15.0
+      Items:
+        - "Item:iron_block, Amount:4, Name:<gray>Iron Block x4"
+    "5":
+      DisplayName: "<dark_gray>Netherite Scrap x2"
+      DisplayItem: "netherite_scrap"
+      DisplayAmount: 2
+      Weight: 12.5
+      Items:
+        - "Item:netherite_scrap, Amount:2, Name:<dark_gray>Netherite Scrap x2"
+    "6":
+      DisplayName: "<gold>Enchanted Golden Apple"
+      DisplayItem: "enchanted_golden_apple"
+      DisplayAmount: 1
+      Weight: 12.5
+      Items:
+        - "Item:enchanted_golden_apple, Name:<gold>Enchanted Golden Apple"
+    "7":
+      DisplayName: "<green>Money Voucher ($10,000)"
+      DisplayItem: "paper"
+      DisplayAmount: 1
+      Weight: 5.0
+      DisplayLore:
+        - "<gray>Redeem for $10,000."
+      Items:
+        - "Item:paper, Name:<green>Money Voucher ($10,000), Lore:<gray>Redeem for $10,000."
+      Commands:
+        - "eco give %player% 10000"

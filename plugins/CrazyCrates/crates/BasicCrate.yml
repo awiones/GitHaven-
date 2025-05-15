@@ -78,98 +78,128 @@ Crate:
       - "&e&lBasic Crate"
   Prizes:
     "1":
-      DisplayName: "<gold>20 Cooked Beef"
-      DisplayItem: "cooked_beef"
-      Settings:
-        Custom-Model-Data: -1
-      DisplayAmount: 20
-      Weight: 1.0
+      DisplayName: "<gray>Common: Stone Pickaxe"
+      DisplayItem: "stone_pickaxe"
+      DisplayAmount: 1
+      Weight: 10.0
       Items:
-        - "Item:cooked_beef, Amount:20, Name:<gold>20 Cooked Beef"
+        - "Item:stone_pickaxe, Name:<gray>Stone Pickaxe"
     "2":
-      DisplayName: "<red>Diamond Sword"
-      DisplayEnchantments:
-        - "sharpness:5"
-        - "looting:3"
-      DisplayItem: "diamond_sword"
-      Settings:
-        Custom-Model-Data: -1
+      DisplayName: "<gray>Common: Stone Axe"
+      DisplayItem: "stone_axe"
       DisplayAmount: 1
-      Weight: 15.0
+      Weight: 10.0
       Items:
-        - "Item:diamond_sword, Name:<red>Diamond Sword, sharpness:5, looting:3"
+        - "Item:stone_axe, Name:<gray>Stone Axe"
     "3":
-      DisplayName: "<red>Diamond Helmet"
-      DisplayEnchantments:
-        - "protection:5"
-        - "unbreaking:3"
-      DisplayTrim:
-        Material: "quartz"
-        Pattern: "sentry"
-      DisplayItem: "diamond_helmet"
-      Settings:
-        Custom-Model-Data: -1
+      DisplayName: "<gray>Common: Stone Shovel"
+      DisplayItem: "stone_shovel"
       DisplayAmount: 1
-      DisplayLore:
-        - "<gradient:#8fcfa0:#32a852>A gradient lore!"
-      Weight: 15.0
+      Weight: 10.0
       Items:
-        - "Item:diamond_helmet, Name:<red>Diamond Helmet, protection:5, unbreaking:3"
+        - "Item:stone_shovel, Name:<gray>Stone Shovel"
     "4":
-      DisplayEnchantments:
-        - "protection:5"
-        - "unbreaking:3"
-      DisplayItem: "enchanted_book"
-      Settings:
-        Custom-Model-Data: -1
-      DisplayAmount: 3
-      DisplayLore:
-        - "<gradient:#8fcfa0:#32a852>A gradient lore!"
-      Weight: 25.0
+      DisplayName: "<gray>Common: Bread x16"
+      DisplayItem: "bread"
+      DisplayAmount: 16
+      Weight: 10.0
       Items:
-        - "Item:enchanted_book, protection:5, unbreaking:3"
+        - "Item:bread, Amount:16, Name:<yellow>Bread x16"
     "5":
-      DisplayName: "<yellow>$1,000"
-      DisplayItem: "sunflower"
-      Settings:
-        Custom-Model-Data: -1
-        Broadcast:
-          Toggle: false
-          Messages:
-            - "<red>%player% won the prize <yellow>%reward%."
-          Permission: ""
-      DisplayAmount: 5
-      DisplayLore:
-        - "<gray>Make it rain Money."
-        - "<bold><gold>Chance: <red>20%</bold>"
-      Weight: 20.0
-      Firework: true
-      Commands:
-        - "eco give %player% 1000"
-      Messages:
-        - "<gray>You won <reset>%reward%."
+      DisplayName: "<gray>Common: Oak Logs x16"
+      DisplayItem: "oak_log"
+      DisplayAmount: 16
+      Weight: 10.0
+      Items:
+        - "Item:oak_log, Amount:16, Name:<yellow>Oak Logs x16"
     "6":
-      DisplayName: "<green>Fancy Shield <gray>| <red>%pulls%<gray>/<red>%maxpulls%"
-      DisplayItem: "shield"
-      DisplayPatterns:
-        - "base:white"
-        - "gradient_up:light_gray"
-        - "straight_cross:light_blue"
-        - "flower:light_blue"
-      Settings:
-        Custom-Model-Data: -1
-        Max-Pulls: 10
-      DisplayAmount: 1
-      Weight: 15.0
+      DisplayName: "<green>Uncommon: Iron Ingot x8"
+      DisplayItem: "iron_ingot"
+      DisplayAmount: 8
+      Weight: 6.0
       Items:
-        - "Item:shield, base:white, gradient_up:light_gray, straight_cross:light_blue, flower:light_blue"
+        - "Item:iron_ingot, Amount:8, Name:<green>Iron Ingot x8"
     "7":
-      DisplayName: "<green>Creeper Spawner"
-      DisplayItem: "spawner"
-      Settings:
-        Custom-Model-Data: -1
-        Mob-Type: creeper
+      DisplayName: "<green>Uncommon: Leather Helmet"
+      DisplayItem: "leather_helmet"
       DisplayAmount: 1
-      Weight: 23.5
+      Weight: 6.0
       Items:
-        - "Item:spawner, Mob:creeper"
+        - "Item:leather_helmet, Name:<green>Leather Helmet"
+    "8":
+      DisplayName: "<green>Uncommon: Leather Chestplate"
+      DisplayItem: "leather_chestplate"
+      DisplayAmount: 1
+      Weight: 6.0
+      Items:
+        - "Item:leather_chestplate, Name:<green>Leather Chestplate"
+    "9":
+      DisplayName: "<green>Uncommon: Leather Leggings"
+      DisplayItem: "leather_leggings"
+      DisplayAmount: 1
+      Weight: 6.0
+      Items:
+        - "Item:leather_leggings, Name:<green>Leather Leggings"
+    "10":
+      DisplayName: "<green>Uncommon: Leather Boots"
+      DisplayItem: "leather_boots"
+      DisplayAmount: 1
+      Weight: 6.0
+      Items:
+        - "Item:leather_boots, Name:<green>Leather Boots"
+    "11":
+      DisplayName: "<blue>Rare: Iron Pickaxe (Unbreaking I)"
+      DisplayItem: "iron_pickaxe"
+      DisplayAmount: 1
+      Weight: 3.0
+      Items:
+        - "Item:iron_pickaxe, enchantment:unbreaking:1, Name:<blue>Iron Pickaxe (Unbreaking I)"
+    "12":
+      DisplayName: "<blue>Rare: Iron Axe (Unbreaking I)"
+      DisplayItem: "iron_axe"
+      DisplayAmount: 1
+      Weight: 3.0
+      Items:
+        - "Item:iron_axe, enchantment:unbreaking:1, Name:<blue>Iron Axe (Unbreaking I)"
+    "13":
+      DisplayName: "<blue>Rare: Iron Shovel (Unbreaking I)"
+      DisplayItem: "iron_shovel"
+      DisplayAmount: 1
+      Weight: 3.0
+      Items:
+        - "Item:iron_shovel, enchantment:unbreaking:1, Name:<blue>Iron Shovel (Unbreaking I)"
+    "14":
+      DisplayName: "<blue>Rare: Water Bucket"
+      DisplayItem: "water_bucket"
+      DisplayAmount: 1
+      Weight: 3.0
+      Items:
+        - "Item:water_bucket, Name:<blue>Water Bucket"
+    "15":
+      DisplayName: "<blue>Rare: Lava Bucket"
+      DisplayItem: "lava_bucket"
+      DisplayAmount: 1
+      Weight: 3.0
+      Items:
+        - "Item:lava_bucket, Name:<blue>Lava Bucket"
+    "16":
+      DisplayName: "<gold>Ultra Rare: Cow Spawn Egg"
+      DisplayItem: "cow_spawn_egg"
+      DisplayAmount: 1
+      Weight: 1.67
+      Items:
+        - "Item:cow_spawn_egg, Name:<gold>Cow Spawn Egg"
+    "17":
+      DisplayName: "<gold>Ultra Rare: Sheep Spawn Egg"
+      DisplayItem: "sheep_spawn_egg"
+      DisplayAmount: 1
+      Weight: 1.67
+      Items:
+        - "Item:sheep_spawn_egg, Name:<gold>Sheep Spawn Egg"
+    "18":
+      DisplayName: "<gold>Ultra Rare: Chicken Spawn Egg"
+      DisplayItem: "chicken_spawn_egg"
+      DisplayAmount: 1
+      Weight: 1.66
+      Items:
+        - "Item:chicken_spawn_egg, Name:<gold>Chicken Spawn Egg"
