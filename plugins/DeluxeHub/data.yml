@@ -1,1 +1,9 @@
 chat_locked: false
+spawn:
+  ==: org.bukkit.Location
+  world: lobby-githaven
+  x: 0.49726024569955807
+  y: -18.0
+  z: -15.64047818101792
+  pitch: 19.350006
+  yaw: -0.3002299

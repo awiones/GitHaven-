@@ -241,3 +241,16 @@ Crate:
         - "UltraRare"
       Items:
         - "Item:piston, Amount:8, Name:<gold>Piston x8"
+    "12":
+      DisplayName: "<#d4af37>Divine Crate Key"
+      DisplayItem: "tripwire_hook"
+      DisplayAmount: 1
+      Weight: 0.2
+      Tiers:
+        - "UltraRare"
+      Commands:
+        - "crazycrates give physical DivineCrate 1 %player%"
+      DisplayLore:
+        - "<gray>A key for the legendary Divine Crate!"
+        - "<yellow>Super rare!"
+

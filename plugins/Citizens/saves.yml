@@ -43,7 +43,7 @@ npc:
       skintrait: {}
       spawned: false
       type: PLAYER
-    traitnames: location,rotationtrait,spawned,type,inventory,owner,commandtrait,lookclose,skintrait,scoreboardtrait
+    traitnames: rotationtrait,location,spawned,scoreboardtrait,skintrait,type,commandtrait,lookclose,inventory,owner
     navigator:
       speedmodifier: 1.0
       avoidwater: false
@@ -89,7 +89,7 @@ npc:
       skintrait: {}
       spawned: false
       type: PLAYER
-    traitnames: location,rotationtrait,spawned,type,inventory,owner,commandtrait,lookclose,skintrait,scoreboardtrait
+    traitnames: rotationtrait,location,spawned,scoreboardtrait,skintrait,type,commandtrait,lookclose,inventory,owner
     navigator:
       speedmodifier: 1.0
       avoidwater: false
