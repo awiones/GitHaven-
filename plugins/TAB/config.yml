@@ -1,20 +1,20 @@
 header-footer:
   enabled: true
   header:
-  - '&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &e&lGITHAVEN NETWORK &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r'
-  - ''
-  - '&7&l>> %animation:Welcome% &6&l%player% &7&l<<'
-  - '&r&8► &7Online Players: &f%online% &8◄'
-  - '&r&8► &6Staff Online: &e%staffonline% &8◄'
-  - ''
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r &6&l✦ &e&lGITHAVEN NETWORK &6&l✦ &8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
+    - ""
+    - "&7&l>> %animation:Welcome% &6&l%player% &7&l<<"
+    - "&r&8► &7Online Players: &f%online% &8◄"
+    - "&r&8► &6Staff Online: &e%staffonline% &8◄"
+    - ""
   footer:
-  - ''
-  - '&7&l⌚ &f%time% &7&l⌚'
-  - '&r&8► &2Ping: &a%ping%ms &8◄ &8► &eTPS: &f%tps% &8◄'
-  - '&r&8► &7Memory: &f%memory-used% MB &8/ &f%memory-max% MB &8◄'
-  - ''
-  - '&6&l✦ &e&l147.185.221.28:21960 &6&l✦'
-  - '&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r'
+    - ""
+    - "&7&l⌚ &f%time% &7&l⌚"
+    - "&r&8► &2Ping: &a%ping%ms &8◄ &8► &eTPS: &f%tps% &8◄"
+    - "&r&8► &7Memory: &f%memory-used% MB &8/ &f%memory-max% MB &8◄"
+    - ""
+    - "&6&l✦ &e&l147.185.221.28:21960 &6&l✦"
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
 tablist-name-formatting:
   enabled: true
   anti-override: true
@@ -24,20 +24,20 @@ scoreboard-teams:
   invisible-nametags: false
   anti-override: true
   sorting-types:
-  - GROUPS:owner,admin,mod,helper,builder,vip,default
-  - PLACEHOLDER_A_TO_Z:%player%
+    - GROUPS:owner,admin,mod,helper,builder,vip,default
+    - PLACEHOLDER_A_TO_Z:%player%
   case-sensitive-sorting: true
 playerlist-objective:
   enabled: true
-  value: '%ping%'
-  fancy-value: '&7⚡ %ping%ms'
+  value: "%ping%"
+  fancy-value: "&7⚡ %ping%ms"
   title: GitHaven
   render-type: INTEGER
 belowname-objective:
   enabled: true
-  value: '%health%'
-  title: '&c❤'
-  fancy-value: '&c%health% &c❤'
+  value: "%health%"
+  title: "&c❤"
+  fancy-value: "&c%health% &c❤"
   fancy-value-default: NPC
 prevent-spectator-effect:
   enabled: true
@@ -49,20 +49,20 @@ scoreboard:
   use-numbers: true
   scoreboards:
     main:
-      title: '&6&lGITHAVEN'
+      title: "&6&lGITHAVEN"
       lines:
-      - '&7&m━━━━━━━━━━━━━━━━━━━━'
-      - '&e➤ &7Player: &f%player%'
-      - '&e➤ &7Rank: &f%group%'
-      - '&7&m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈'
-      - '&e➤ &7Online: &f%online%&8/&f%server_max_players%'
-      - '&e➤ &7Ping: &f%ping%&8ms'
-      - '&e➤ &7Balance: &a$%vault_eco_balance%'
-      - '&7&m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈'
-      - '&e➤ &7World: &f%world%'
-      - '&e➤ &7Time: &f%time%'
-      - '&7&m━━━━━━━━━━━━━━━━━━━━'
-      - '&b✦ &e147.185.221.28:21960 &b✦'
+        - "&7&m━━━━━━━━━━━━━━━━━━━━"
+        - "&e➤ &7Player: &f%player%"
+        - "&e➤ &7Rank: &f%luckperms_primary_group_name%"
+        - "&7&m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈"
+        - "&e➤ &7Online: &f%online%&8/&f%server_max_players%"
+        - "&e➤ &7Ping: &f%ping%&8ms"
+        - "&e➤ &7Balance: &a$%vault_eco_balance_formatted%"
+        - "&7&m┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈"
+        - "&e➤ &7World: &f%world%"
+        - "&e➤ &7Time: &f%time%"
+        - "&7&m━━━━━━━━━━━━━━━━━━━━"
+        - "&b✦ &e147.185.221.28:21960 &b✦"
 layout:
   enabled: false
 ping-spoof:
@@ -73,94 +73,94 @@ placeholders:
   time-offset: 0
   register-tab-expansion: true
 placeholder-output-replacements:
-  '%essentials_vanished%':
-    'yes': '&7| &8Vanished'
-    'no': ''
+  "%essentials_vanished%":
+    "yes": "&7| &8Vanished"
+    "no": ""
 conditions:
   nick:
     conditions:
-    - '%player%=%essentials_nickname%'
-    true: '%player%'
+      - "%player%=%essentials_nickname%"
+    true: "%player%"
     false: ~%essentials_nickname%
   staff:
     conditions:
-    - permission:tab.staff
-    true: '&c⚑ '
-    false: ''
+      - permission:tab.staff
+    true: "&c⚑ "
+    false: ""
 placeholder-refresh-intervals:
   default-refresh-interval: 500
-  '%server_uptime%': 1000
-  '%server_tps_1_colored%': 500
-  '%player_health%': 200
-  '%player_ping%': 500
-  '%vault_prefix%': 1000
+  "%server_uptime%": 1000
+  "%server_tps_1_colored%": 500
+  "%player_health%": 200
+  "%player_ping%": 500
+  "%vault_prefix%": 1000
 animations:
   Welcome:
     change-interval: 200
     random: false
     texts:
-    - '&fWelcome'
-    - '&eWelcome'
-    - '&6Welcome'
-    - '&eWelcome'
+      - "&fWelcome"
+      - "&eWelcome"
+      - "&6Welcome"
+      - "&eWelcome"
   web:
     change-interval: 500
     random: false
     texts:
-    - '&ewww.githaven.com'
-    - '&6www.githaven.com'
-    - '&ewww.githaven.com'
-    - '&6www.githaven.com'
+      - "&ewww.githaven.com"
+      - "&6www.githaven.com"
+      - "&ewww.githaven.com"
+      - "&6www.githaven.com"
   barcolors:
     change-interval: 500
     random: false
     texts:
-    - YELLOW
-    - PINK
-    - BLUE
-    - RED
-    - GREEN
-    - PURPLE
-    - WHITE
-    - YELLOW
-    - PINK
-    - BLUE
-    - RED
-    - GREEN
-    - PURPLE
-    - WHITE
+      - YELLOW
+      - PINK
+      - BLUE
+      - RED
+      - GREEN
+      - PURPLE
+      - WHITE
+      - YELLOW
+      - PINK
+      - BLUE
+      - RED
+      - GREEN
+      - PURPLE
+      - WHITE
   progress:
     change-interval: 200
     random: false
     texts:
-    - '100'
-    - '90'
-    - '80'
-    - '70'
-    - '60'
-    - '50'
-    - '40'
-    - '30'
-    - '20'
-    - '10'
-    - '20'
-    - '30'
-    - '40'
-    - '50'
-    - '60'
-    - '70'
-    - '80'
-    - '90'
+      - "100"
+      - "90"
+      - "80"
+      - "70"
+      - "60"
+      - "50"
+      - "40"
+      - "30"
+      - "20"
+      - "10"
+      - "20"
+      - "30"
+      - "40"
+      - "50"
+      - "60"
+      - "70"
+      - "80"
+      - "90"
 assign-groups-by-permissions: false
 primary-group-finding-list:
-- Owner
-- Admin
-- Mod
-- Helper
-- Builder
-- VIP
-- MVP
-- default
+  - Owner
+  - Admin
+  - Mod
+  - Helper
+  - Builder
+  - VIP
+  - MVP
+  - default
 permission-refresh-interval: 1000
 debug: false
 mysql:
