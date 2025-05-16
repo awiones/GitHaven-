@@ -25,7 +25,7 @@ Owner:
     - "&8» &7Staff commands: &f/staff"
     - "&8» &7Server controls: &f/server"
     - ""
-    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+    - "&6&l✦ &e&l147.185.221.28:21960&6&l✦"
 
 Admin:
   tabprefix: "&8[&c&lADMIN&8] &c"
@@ -46,7 +46,7 @@ Admin:
     - "&8» &7Staff commands: &f/staff"
     - "&8» &7Server controls: &f/server"
     - ""
-    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+    - "&6&l✦ &e&l147.185.221.28:21960&6&l✦"
 
 Mod:
   tabprefix: "&8[&9&lMOD&8] &9"
@@ -65,7 +65,7 @@ Mod:
     - ""
     - "&8» &7Mod commands: &f/mod"
     - ""
-    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+    - "&6&l✦ &e&l147.185.221.28:21960&6&l✦"
 
 Helper:
   tabprefix: "&8[&3&lHELPER&8] &3"
@@ -84,7 +84,7 @@ Helper:
     - ""
     - "&8» &7Helper commands: &f/helper"
     - ""
-    - "&6&l✦ &e&lplay.githaven.com &6&l✦"
+    - "&6&l✦ &e&l147.185.221.28:21960&6&l✦"
 
 # ✦------------ Donor Groups ------------✦
 
@@ -144,6 +144,7 @@ _DEFAULT_:
     - "&7&l⌚ &f%time% &7&l⌚"
     - ""
     - "&eWebsite: &bwww.githaven.com &7| &eDiscord: &bdiscord.githaven.com"
+    - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
     - "&8&m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯&r"
 
 # ✦------------ World-Specific Settings ------------✦

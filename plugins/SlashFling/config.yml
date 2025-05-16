@@ -1,0 +1,22 @@
+# SlashFling Configuration
+
+# Cooldown time in seconds between using the fling command
+cooldown-seconds: 30
+
+# Strength of the fling effect (velocity in Y direction)
+# Higher values will send players higher
+fling-strength: 2.5
+
+# Duration of fall damage resistance in ticks (20 ticks = 1 second)
+resistance-duration-ticks: 100
+
+# Messages (supports color codes with &)
+messages:
+  prefix: "&6[SlashFling]&r "
+  player-flinged: "&aFlung &e%player%&a into the sky!"
+  target-message: "&eYou have been flung into the sky! Enjoy the flight!"
+  no-permission: "&cYou don't have permission to use this command."
+  player-not-found: "&cPlayer not found."
+  cooldown: "&cYou must wait %seconds% seconds before using this command again."
+  reload-success: "&aConfiguration reloaded successfully!"
+  immune-player: "&cYou cannot fling this player."
